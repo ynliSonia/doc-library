@@ -1,0 +1,16 @@
+<!doctype html>
+
+<html>
+    <head>
+        <meta name="charset" content="utf-8" />
+        <title>{{title}}</title>
+        <link type="text/css" href="/assets/build/lib/bootstrap.min.css" rev="stylesheet" rel="stylesheet"/>
+        <link type="text/css" href="/assets/build/p/{{pageName}}/index.css" rev="stylesheet" rel="stylesheet"/>
+        <script src="/assets/build/lib/jquery.min.js"></script>
+        <script src="/assets/build/p/{{pageName}}/index.js"></script>
+    </head>
+    <body>
+        {{include ("./nav.xtpl") }}
+        {{{block ("body")}}}
+    </body>
+</html>

@@ -1,0 +1,30 @@
+{{ extend ("./layout") }}
+
+{{#block ("body")}}
+
+	<div class="main-content">
+
+		<div>
+			<a href="./newgroup" class="add-btn">新建分组</a>
+			<span class="warming">为了方便查找，分组是按人名的哦~</span>
+		</div>
+
+		<div class="dl-docs">
+			<ul class="doc-list">
+				{{#each(list)}}
+				<li class="group-item">
+					<a href="./list/{{this.id}}" class="preview">
+						<img src="{{this.photo}}" />
+					</a>
+					<div class="infos">
+						<p class="name"><a href="./">{{this.name}}</a></p>
+						<p class="doc-desc">{{this.identity}}</p>
+						<p class="time-show"> {{this.times}}</p>
+					</div>
+				</li>
+				{{/each}}
+			</ul>
+		</div>
+	</div>
+
+{{/block}}

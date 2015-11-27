@@ -1,0 +1,27 @@
+{{ extend ("./layout") }}
+
+{{#block ("body")}}
+
+	<div class="main-content">
+
+		<a href="/new/{{id}}" class="add-btn">新建文档</a>
+
+		<div class="dl-docs">
+			<ul class="doc-list">
+				{{#each(list)}}
+				<li class="doc-item">
+					<a href="./" class="preview">
+						<img src="{{this.docPath}}" />
+					</a>
+					<div class="infos">
+						<p class="name"><a href="./">{{this.name}}</a></p>
+						<p class="doc-desc">{{this.desc}}</p>
+						<p class="time-show"> <a class="author" href="./">{{this.author}}</a> {{this.times}}</p>
+					</div>
+				</li>
+				{{/each}}
+			</ul>
+		</div>
+	</div>
+
+{{/block}}
