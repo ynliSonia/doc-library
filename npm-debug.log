@@ -1,0 +1,585 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/usr/local/bin/iojs',
+1 verbose cli   '/usr/local/lib/node_modules/cnpm/node_modules/.bin/npm',
+1 verbose cli   '--userconfig=/Users/mango/.cnpmrc',
+1 verbose cli   '--disturl=https://npm.taobao.org/mirrors/iojs',
+1 verbose cli   '--cache=/Users/mango/.cnpm',
+1 verbose cli   '--registry=https://registry.npm.taobao.org',
+1 verbose cli   '--node-gyp=/usr/local/lib/node_modules/cnpm/node_modules/pangyp/bin/node-gyp.js',
+1 verbose cli   'install',
+1 verbose cli   'canvas' ]
+2 info using npm@2.7.6
+3 info using node@v3.3.0
+4 verbose install initial load of /Users/mango/web/app/psd-to-img/package.json
+5 warn package.json n-start1@1.0.0 No repository field.
+6 verbose installManyTop reading scoped package data from /Users/mango/web/app/psd-to-img/node_modules/bluebird/package.json
+7 verbose installManyTop reading scoped package data from /Users/mango/web/app/psd-to-img/node_modules/body-parser/package.json
+8 verbose installManyTop reading scoped package data from /Users/mango/web/app/psd-to-img/node_modules/bootstrap/package.json
+9 verbose installManyTop reading scoped package data from /Users/mango/web/app/psd-to-img/node_modules/browserify/package.json
+10 verbose installManyTop reading scoped package data from /Users/mango/web/app/psd-to-img/node_modules/coffee-loader/package.json
+11 verbose installManyTop reading scoped package data from /Users/mango/web/app/psd-to-img/node_modules/coffee-script/package.json
+12 verbose installManyTop reading scoped package data from /Users/mango/web/app/psd-to-img/node_modules/express/package.json
+13 verbose installManyTop reading scoped package data from /Users/mango/web/app/psd-to-img/node_modules/formidable/package.json
+14 verbose installManyTop reading scoped package data from /Users/mango/web/app/psd-to-img/node_modules/globby/package.json
+15 verbose installManyTop reading scoped package data from /Users/mango/web/app/psd-to-img/node_modules/gulp/package.json
+16 verbose installManyTop reading scoped package data from /Users/mango/web/app/psd-to-img/node_modules/gulp-autoprefixer/package.json
+17 verbose installManyTop reading scoped package data from /Users/mango/web/app/psd-to-img/node_modules/gulp-babel/package.json
+18 verbose installManyTop reading scoped package data from /Users/mango/web/app/psd-to-img/node_modules/gulp-connect/package.json
+19 verbose installManyTop reading scoped package data from /Users/mango/web/app/psd-to-img/node_modules/gulp-less/package.json
+20 verbose installManyTop reading scoped package data from /Users/mango/web/app/psd-to-img/node_modules/gulp-minify-css/package.json
+21 verbose installManyTop reading scoped package data from /Users/mango/web/app/psd-to-img/node_modules/gulp-react/package.json
+22 verbose installManyTop reading scoped package data from /Users/mango/web/app/psd-to-img/node_modules/gulp-rename/package.json
+23 verbose installManyTop reading scoped package data from /Users/mango/web/app/psd-to-img/node_modules/gulp-rimraf/package.json
+24 verbose installManyTop reading scoped package data from /Users/mango/web/app/psd-to-img/node_modules/gulp-streamify/package.json
+25 verbose installManyTop reading scoped package data from /Users/mango/web/app/psd-to-img/node_modules/gulp-uglify/package.json
+26 verbose installManyTop reading scoped package data from /Users/mango/web/app/psd-to-img/node_modules/gulp-util/package.json
+27 verbose installManyTop reading scoped package data from /Users/mango/web/app/psd-to-img/node_modules/jade/package.json
+28 verbose installManyTop reading scoped package data from /Users/mango/web/app/psd-to-img/node_modules/lodash/package.json
+29 verbose installManyTop reading scoped package data from /Users/mango/web/app/psd-to-img/node_modules/log4js/package.json
+30 verbose installManyTop reading scoped package data from /Users/mango/web/app/psd-to-img/node_modules/mongodb/package.json
+31 verbose installManyTop reading scoped package data from /Users/mango/web/app/psd-to-img/node_modules/mongoskin/package.json
+32 verbose installManyTop reading scoped package data from /Users/mango/web/app/psd-to-img/node_modules/pdf-image/package.json
+33 verbose installManyTop reading scoped package data from /Users/mango/web/app/psd-to-img/node_modules/psd/package.json
+34 verbose installManyTop reading scoped package data from /Users/mango/web/app/psd-to-img/node_modules/reactify/package.json
+35 verbose installManyTop reading scoped package data from /Users/mango/web/app/psd-to-img/node_modules/vinyl-buffer/package.json
+36 verbose installManyTop reading scoped package data from /Users/mango/web/app/psd-to-img/node_modules/vinyl-source-stream/package.json
+37 verbose installManyTop reading scoped package data from /Users/mango/web/app/psd-to-img/node_modules/webpack/package.json
+38 verbose installManyTop reading scoped package data from /Users/mango/web/app/psd-to-img/node_modules/xtemplate/package.json
+39 verbose installManyTop reading scoped package data from /Users/mango/web/app/psd-to-img/node_modules/xtpl/package.json
+40 verbose readDependencies loading dependencies from /Users/mango/web/app/psd-to-img/package.json
+41 silly cache add args [ 'canvas', null ]
+42 verbose cache add spec canvas
+43 silly cache add parsed spec Result {
+43 silly cache add   raw: 'canvas',
+43 silly cache add   scope: null,
+43 silly cache add   name: 'canvas',
+43 silly cache add   rawSpec: '',
+43 silly cache add   spec: '*',
+43 silly cache add   type: 'range' }
+44 silly addNamed canvas@*
+45 verbose addNamed "*" is a valid semver range for canvas
+46 silly addNameRange { name: 'canvas', range: '*', hasData: false }
+47 silly mapToRegistry name canvas
+48 silly mapToRegistry using default registry
+49 silly mapToRegistry registry https://registry.npm.taobao.org/
+50 silly mapToRegistry uri https://registry.npm.taobao.org/canvas
+51 verbose addNameRange registry:https://registry.npm.taobao.org/canvas not in flight; fetching
+52 verbose request uri https://registry.npm.taobao.org/canvas
+53 verbose request no auth needed
+54 info attempt registry request try #1 at 14:33:20
+55 verbose request id bc4715795bfb4249
+56 verbose etag "1c27b-Dv+Kf4lXLPE98+SyllI6zQ"
+57 http request GET https://registry.npm.taobao.org/canvas
+58 http 304 https://registry.npm.taobao.org/canvas
+59 silly get cb [ 304,
+59 silly get   { date: 'Fri, 04 Dec 2015 06:33:23 GMT',
+59 silly get     connection: 'keep-alive',
+59 silly get     etag: '"1c27b-Dv+Kf4lXLPE98+SyllI6zQ"',
+59 silly get     'x-readtime': '276' } ]
+60 verbose etag https://registry.npm.taobao.org/canvas from cache
+61 verbose get saving canvas to /Users/mango/.cnpm/registry.npm.taobao.org/canvas/.cache.json
+62 silly addNameRange number 2 { name: 'canvas', range: '*', hasData: true }
+63 silly addNameRange versions [ 'canvas',
+63 silly addNameRange   [ '1.3.4',
+63 silly addNameRange     '1.3.3',
+63 silly addNameRange     '1.3.2',
+63 silly addNameRange     '1.3.1',
+63 silly addNameRange     '1.3.0',
+63 silly addNameRange     '1.2.11',
+63 silly addNameRange     '1.2.10',
+63 silly addNameRange     '1.2.9',
+63 silly addNameRange     '1.2.8',
+63 silly addNameRange     '1.2.7',
+63 silly addNameRange     '1.2.6',
+63 silly addNameRange     '1.2.5',
+63 silly addNameRange     '1.2.4',
+63 silly addNameRange     '1.2.3',
+63 silly addNameRange     '1.2.2',
+63 silly addNameRange     '1.2.1',
+63 silly addNameRange     '1.2.0',
+63 silly addNameRange     '1.1.6',
+63 silly addNameRange     '1.1.5',
+63 silly addNameRange     '1.1.4',
+63 silly addNameRange     '1.1.3',
+63 silly addNameRange     '1.1.2',
+63 silly addNameRange     '1.1.1',
+63 silly addNameRange     '1.1.0',
+63 silly addNameRange     '1.0.4',
+63 silly addNameRange     '1.0.3',
+63 silly addNameRange     '1.0.2',
+63 silly addNameRange     '1.0.1',
+63 silly addNameRange     '1.0.0',
+63 silly addNameRange     '0.13.1',
+63 silly addNameRange     '0.13.0',
+63 silly addNameRange     '0.12.1',
+63 silly addNameRange     '0.12.0',
+63 silly addNameRange     '0.11.3',
+63 silly addNameRange     '0.11.2',
+63 silly addNameRange     '0.11.1',
+63 silly addNameRange     '0.11.0',
+63 silly addNameRange     '0.10.3',
+63 silly addNameRange     '0.10.2',
+63 silly addNameRange     '0.10.1',
+63 silly addNameRange     '0.10.0',
+63 silly addNameRange     '0.9.0',
+63 silly addNameRange     '0.8.3',
+63 silly addNameRange     '0.8.2',
+63 silly addNameRange     '0.8.1',
+63 silly addNameRange     '0.8.0',
+63 silly addNameRange     '0.7.3',
+63 silly addNameRange     '0.7.2',
+63 silly addNameRange     '0.7.1',
+63 silly addNameRange     '0.7.0',
+63 silly addNameRange     '0.6.0',
+63 silly addNameRange     '0.5.4',
+63 silly addNameRange     '0.5.3',
+63 silly addNameRange     '0.5.2',
+63 silly addNameRange     '0.5.1',
+63 silly addNameRange     '0.5.0',
+63 silly addNameRange     '0.4.3',
+63 silly addNameRange     '0.4.2',
+63 silly addNameRange     '0.2.0',
+63 silly addNameRange     '0.4.1',
+63 silly addNameRange     '0.4.0',
+63 silly addNameRange     '0.0.8',
+63 silly addNameRange     '0.3.2',
+63 silly addNameRange     '0.3.1',
+63 silly addNameRange     '0.3.0',
+63 silly addNameRange     '0.2.1',
+63 silly addNameRange     '0.3.3',
+63 silly addNameRange     '0.1.0',
+63 silly addNameRange     '0.0.2',
+63 silly addNameRange     '0.0.3',
+63 silly addNameRange     '0.0.7',
+63 silly addNameRange     '0.0.6',
+63 silly addNameRange     '0.0.5',
+63 silly addNameRange     '0.0.4',
+63 silly addNameRange     '0.0.1' ] ]
+64 silly addNamed canvas@1.3.4
+65 verbose addNamed "1.3.4" is a plain semver version for canvas
+66 silly mapToRegistry name canvas
+67 silly mapToRegistry using default registry
+68 silly mapToRegistry registry https://registry.npm.taobao.org/
+69 silly mapToRegistry uri https://registry.npm.taobao.org/canvas
+70 verbose addRemoteTarball https://registry.npm.taobao.org/canvas/download/canvas-1.3.4.tgz not in flight; adding
+71 verbose addRemoteTarball [ 'https://registry.npm.taobao.org/canvas/download/canvas-1.3.4.tgz',
+71 verbose addRemoteTarball   '5640d2eda1ae33b7c7279346dc253ceb6647c71d' ]
+72 info retry fetch attempt 1 at 14:33:23
+73 info attempt registry request try #1 at 14:33:23
+74 http fetch GET https://registry.npm.taobao.org/canvas/download/canvas-1.3.4.tgz
+75 http fetch 200 https://registry.npm.taobao.org/canvas/download/canvas-1.3.4.tgz
+76 silly fetchAndShaCheck shasum 5640d2eda1ae33b7c7279346dc253ceb6647c71d
+77 verbose addTmpTarball /var/folders/5s/w3ys4gvx7jq8y7qmtv6ckcl00000gn/T/npm-5663-955ac834/registry.npm.taobao.org/canvas/download/canvas-1.3.4.tgz not in flight; adding
+78 verbose addTmpTarball already have metadata; skipping unpack for canvas@1.3.4
+79 silly cache afterAdd canvas@1.3.4
+80 verbose afterAdd /Users/mango/.cnpm/canvas/1.3.4/package/package.json not in flight; writing
+81 verbose afterAdd /Users/mango/.cnpm/canvas/1.3.4/package/package.json written
+82 silly install resolved [ { name: 'canvas',
+82 silly install resolved     description: 'Canvas graphics API backed by Cairo',
+82 silly install resolved     version: '1.3.4',
+82 silly install resolved     author: { name: 'TJ Holowaychuk', email: 'tj@learnboost.com' },
+82 silly install resolved     contributors: [ [Object], [Object], [Object] ],
+82 silly install resolved     keywords:
+82 silly install resolved      [ 'canvas',
+82 silly install resolved        'graphic',
+82 silly install resolved        'graphics',
+82 silly install resolved        'pixman',
+82 silly install resolved        'cairo',
+82 silly install resolved        'image',
+82 silly install resolved        'images',
+82 silly install resolved        'pdf' ],
+82 silly install resolved     homepage: 'https://github.com/Automattic/node-canvas',
+82 silly install resolved     repository:
+82 silly install resolved      { type: 'git',
+82 silly install resolved        url: 'git://github.com/Automattic/node-canvas.git' },
+82 silly install resolved     scripts:
+82 silly install resolved      { prebenchmark: 'node-gyp build',
+82 silly install resolved        benchmark: 'node benchmarks/run.js',
+82 silly install resolved        pretest: 'node-gyp build',
+82 silly install resolved        test: 'mocha test/*.test.js',
+82 silly install resolved        'pretest-server': 'node-gyp build',
+82 silly install resolved        'test-server': 'node test/server.js',
+82 silly install resolved        install: 'node-gyp rebuild' },
+82 silly install resolved     dependencies: { nan: '^2.1.0' },
+82 silly install resolved     devDependencies:
+82 silly install resolved      { 'body-parser': '^1.13.3',
+82 silly install resolved        express: '^4.13.2',
+82 silly install resolved        jade: '^1.11.0',
+82 silly install resolved        mocha: '*' },
+82 silly install resolved     engines: { node: '>=0.8.0' },
+82 silly install resolved     main: './lib/canvas.js',
+82 silly install resolved     license: 'MIT',
+82 silly install resolved     gypfile: true,
+82 silly install resolved     gitHead: '873141d89b89e0891ba7650f728fd0b37d36c924',
+82 silly install resolved     bugs: { url: 'https://github.com/Automattic/node-canvas/issues' },
+82 silly install resolved     _id: 'canvas@1.3.4',
+82 silly install resolved     _shasum: '5640d2eda1ae33b7c7279346dc253ceb6647c71d',
+82 silly install resolved     _from: 'canvas@*',
+82 silly install resolved     _npmVersion: '3.3.9',
+82 silly install resolved     _nodeVersion: '5.0.0',
+82 silly install resolved     _npmUser: { name: 'linusu', email: 'linus@folkdatorn.se' },
+82 silly install resolved     maintainers: [ [Object], [Object], [Object], [Object], [Object], [Object] ],
+82 silly install resolved     dist:
+82 silly install resolved      { shasum: '5640d2eda1ae33b7c7279346dc253ceb6647c71d',
+82 silly install resolved        size: 53112,
+82 silly install resolved        noattachment: false,
+82 silly install resolved        tarball: 'http://registry.npm.taobao.org/canvas/download/canvas-1.3.4.tgz' },
+82 silly install resolved     directories: {},
+82 silly install resolved     publish_time: 1448125498161,
+82 silly install resolved     _cnpm_publish_time: 1448125498161,
+82 silly install resolved     _resolved: 'https://registry.npm.taobao.org/canvas/download/canvas-1.3.4.tgz' } ]
+83 info install canvas@1.3.4 into /Users/mango/web/app/psd-to-img
+84 info installOne canvas@1.3.4
+85 verbose installOne of canvas to /Users/mango/web/app/psd-to-img not in flight; installing
+86 verbose lock using /Users/mango/.cnpm/_locks/canvas-2c7110ce7fe418a0.lock for /Users/mango/web/app/psd-to-img/node_modules/canvas
+87 silly install write writing canvas 1.3.4 to /Users/mango/web/app/psd-to-img/node_modules/canvas
+88 verbose unbuild node_modules/canvas
+89 silly gentlyRm /Users/mango/web/app/psd-to-img/node_modules/canvas is being purged from base /Users/mango/web/app/psd-to-img
+90 verbose gentlyRm don't care about contents; nuking /Users/mango/web/app/psd-to-img/node_modules/canvas
+91 verbose tar unpack /Users/mango/.cnpm/canvas/1.3.4/package.tgz
+92 verbose tar unpacking to /Users/mango/web/app/psd-to-img/node_modules/canvas
+93 silly gentlyRm /Users/mango/web/app/psd-to-img/node_modules/canvas is being purged
+94 verbose gentlyRm don't care about contents; nuking /Users/mango/web/app/psd-to-img/node_modules/canvas
+95 silly gunzTarPerm modes [ '755', '644' ]
+96 silly gunzTarPerm extractEntry package.json
+97 silly gunzTarPerm extractEntry .npmignore
+98 silly gunzTarPerm extractEntry index.js
+99 silly gunzTarPerm extractEntry Readme.md
+100 silly gunzTarPerm extractEntry binding.gyp
+101 silly gunzTarPerm extractEntry .travis.yml
+102 silly gunzTarPerm extractEntry install
+103 silly gunzTarPerm extractEntry lib/bindings.js
+104 silly gunzTarPerm extractEntry lib/canvas.js
+105 silly gunzTarPerm extractEntry lib/context2d.js
+106 silly gunzTarPerm extractEntry lib/image.js
+107 silly gunzTarPerm extractEntry lib/jpegstream.js
+108 silly gunzTarPerm extractEntry lib/pngstream.js
+109 silly gunzTarPerm extractEntry History.md
+110 silly gunzTarPerm extractEntry src/Image.cc
+111 silly gunzTarPerm extractEntry src/Canvas.cc
+112 silly gunzTarPerm extractEntry src/CanvasGradient.cc
+113 silly gunzTarPerm extractEntry src/CanvasGradient.h
+114 silly gunzTarPerm extractEntry src/CanvasPattern.cc
+115 silly gunzTarPerm extractEntry src/CanvasPattern.h
+116 silly gunzTarPerm extractEntry src/CanvasRenderingContext2d.cc
+117 silly gunzTarPerm extractEntry src/CanvasRenderingContext2d.h
+118 silly gunzTarPerm extractEntry src/FontFace.cc
+119 silly gunzTarPerm extractEntry src/FontFace.h
+120 silly gunzTarPerm extractEntry src/Canvas.h
+121 silly gunzTarPerm extractEntry src/Image.h
+122 silly gunzTarPerm extractEntry src/ImageData.cc
+123 silly gunzTarPerm extractEntry src/ImageData.h
+124 silly gunzTarPerm extractEntry src/JPEGStream.h
+125 silly gunzTarPerm extractEntry src/PNG.h
+126 silly gunzTarPerm extractEntry src/Point.h
+127 silly gunzTarPerm extractEntry src/closure.h
+128 silly gunzTarPerm extractEntry src/color.cc
+129 silly gunzTarPerm extractEntry src/color.h
+130 silly gunzTarPerm extractEntry src/init.cc
+131 silly gunzTarPerm extractEntry util/cairo_include.sh
+132 silly gunzTarPerm extractEntry util/has_cairo_freetype.sh
+133 silly gunzTarPerm extractEntry util/has_lib.sh
+134 silly gunzTarPerm extractEntry util/lib_lookup.sh
+135 verbose write writing to /Users/mango/web/app/psd-to-img/node_modules/canvas/package.json
+136 info preinstall canvas@1.3.4
+137 verbose readDependencies loading dependencies from /Users/mango/web/app/psd-to-img/node_modules/canvas/package.json
+138 silly prepareForInstallMany adding nan@^2.1.0 from canvas dependencies
+139 verbose readDependencies loading dependencies from /Users/mango/web/app/psd-to-img/node_modules/canvas/package.json
+140 silly cache add args [ 'nan@^2.1.0', null ]
+141 verbose cache add spec nan@^2.1.0
+142 silly cache add parsed spec Result {
+142 silly cache add   raw: 'nan@^2.1.0',
+142 silly cache add   scope: null,
+142 silly cache add   name: 'nan',
+142 silly cache add   rawSpec: '^2.1.0',
+142 silly cache add   spec: '>=2.1.0 <3.0.0',
+142 silly cache add   type: 'range' }
+143 silly addNamed nan@>=2.1.0 <3.0.0
+144 verbose addNamed ">=2.1.0 <3.0.0" is a valid semver range for nan
+145 silly addNameRange { name: 'nan', range: '>=2.1.0 <3.0.0', hasData: false }
+146 silly mapToRegistry name nan
+147 silly mapToRegistry using default registry
+148 silly mapToRegistry registry https://registry.npm.taobao.org/
+149 silly mapToRegistry uri https://registry.npm.taobao.org/nan
+150 verbose addNameRange registry:https://registry.npm.taobao.org/nan not in flight; fetching
+151 verbose request uri https://registry.npm.taobao.org/nan
+152 verbose request no auth needed
+153 info attempt registry request try #1 at 14:33:26
+154 verbose etag "1a099-aNeS4EkgKG54BGvywvw+uw"
+155 http request GET https://registry.npm.taobao.org/nan
+156 http 304 https://registry.npm.taobao.org/nan
+157 silly get cb [ 304,
+157 silly get   { date: 'Fri, 04 Dec 2015 06:33:27 GMT',
+157 silly get     connection: 'keep-alive',
+157 silly get     etag: '"1a099-aNeS4EkgKG54BGvywvw+uw"',
+157 silly get     'x-readtime': '140' } ]
+158 verbose etag https://registry.npm.taobao.org/nan from cache
+159 verbose get saving nan to /Users/mango/.cnpm/registry.npm.taobao.org/nan/.cache.json
+160 silly addNameRange number 2 { name: 'nan', range: '>=2.1.0 <3.0.0', hasData: true }
+161 silly addNameRange versions [ 'nan',
+161 silly addNameRange   [ '2.1.0',
+161 silly addNameRange     '2.0.9',
+161 silly addNameRange     '2.0.8',
+161 silly addNameRange     '2.0.7',
+161 silly addNameRange     '2.0.6',
+161 silly addNameRange     '2.0.5',
+161 silly addNameRange     '2.0.4',
+161 silly addNameRange     '2.0.3',
+161 silly addNameRange     '2.0.2',
+161 silly addNameRange     '2.0.1',
+161 silly addNameRange     '2.0.0',
+161 silly addNameRange     '1.9.0',
+161 silly addNameRange     '1.8.4',
+161 silly addNameRange     '1.8.3',
+161 silly addNameRange     '1.8.2',
+161 silly addNameRange     '1.8.1',
+161 silly addNameRange     '1.8.0',
+161 silly addNameRange     '1.7.0',
+161 silly addNameRange     '1.6.2',
+161 silly addNameRange     '1.6.1',
+161 silly addNameRange     '1.5.3',
+161 silly addNameRange     '1.6.0',
+161 silly addNameRange     '1.5.2',
+161 silly addNameRange     '1.5.1',
+161 silly addNameRange     '1.4.3',
+161 silly addNameRange     '1.4.2',
+161 silly addNameRange     '1.5.0',
+161 silly addNameRange     '1.4.1',
+161 silly addNameRange     '1.4.0',
+161 silly addNameRange     '1.3.0',
+161 silly addNameRange     '1.2.0',
+161 silly addNameRange     '1.1.2',
+161 silly addNameRange     '1.1.1',
+161 silly addNameRange     '1.1.0',
+161 silly addNameRange     '1.0.0',
+161 silly addNameRange     '0.8.0',
+161 silly addNameRange     '0.7.1',
+161 silly addNameRange     '0.7.0',
+161 silly addNameRange     '0.6.0',
+161 silly addNameRange     '0.5.2',
+161 silly addNameRange     '0.5.1',
+161 silly addNameRange     '0.5.0',
+161 silly addNameRange     '0.4.4',
+161 silly addNameRange     '0.4.3',
+161 silly addNameRange     '0.4.2',
+161 silly addNameRange     '0.4.1',
+161 silly addNameRange     '0.4.0',
+161 silly addNameRange     '0.3.2',
+161 silly addNameRange     '0.3.1',
+161 silly addNameRange     '0.3.0',
+161 silly addNameRange     '0.3.0-wip2',
+161 silly addNameRange     '0.3.0-wip' ] ]
+162 silly addNamed nan@2.1.0
+163 verbose addNamed "2.1.0" is a plain semver version for nan
+164 silly cache afterAdd nan@2.1.0
+165 verbose afterAdd /Users/mango/.cnpm/nan/2.1.0/package/package.json not in flight; writing
+166 verbose afterAdd /Users/mango/.cnpm/nan/2.1.0/package/package.json written
+167 silly install resolved [ { name: 'nan',
+167 silly install resolved     version: '2.1.0',
+167 silly install resolved     description: 'Native Abstractions for Node.js: C++ header for Node 0.8 -> 4 compatibility',
+167 silly install resolved     main: 'include_dirs.js',
+167 silly install resolved     repository: { type: 'git', url: 'git://github.com/nodejs/nan.git' },
+167 silly install resolved     scripts:
+167 silly install resolved      { test: 'tap --gc test/js/*-test.js',
+167 silly install resolved        'rebuild-tests': 'node-gyp rebuild --msvs_version=2013 --directory test',
+167 silly install resolved        docs: 'doc/.build.sh' },
+167 silly install resolved     contributors:
+167 silly install resolved      [ [Object],
+167 silly install resolved        [Object],
+167 silly install resolved        [Object],
+167 silly install resolved        [Object],
+167 silly install resolved        [Object],
+167 silly install resolved        [Object],
+167 silly install resolved        [Object] ],
+167 silly install resolved     devDependencies:
+167 silly install resolved      { bindings: '~1.2.1',
+167 silly install resolved        commander: '^2.8.1',
+167 silly install resolved        glob: '^5.0.14',
+167 silly install resolved        'node-gyp': '~3.0.1',
+167 silly install resolved        tap: '~0.7.1',
+167 silly install resolved        xtend: '~4.0.0' },
+167 silly install resolved     license: 'MIT',
+167 silly install resolved     bugs: { url: 'https://github.com/nodejs/nan/issues' },
+167 silly install resolved     homepage: 'https://github.com/nodejs/nan#readme',
+167 silly install resolved     _id: 'nan@2.1.0',
+167 silly install resolved     _shasum: '020a7ccedc63fdee85f85967d5607849e74abbe8',
+167 silly install resolved     _resolved: 'https://registry.npm.taobao.org/nan/download/nan-2.1.0.tgz',
+167 silly install resolved     _from: 'nan@>=2.1.0 <3.0.0',
+167 silly install resolved     _npmVersion: '3.3.5',
+167 silly install resolved     _nodeVersion: '4.1.2',
+167 silly install resolved     _npmUser: { name: 'kkoopa', email: 'bbyholm@abo.fi' },
+167 silly install resolved     dist:
+167 silly install resolved      { shasum: '020a7ccedc63fdee85f85967d5607849e74abbe8',
+167 silly install resolved        size: 62563,
+167 silly install resolved        noattachment: false,
+167 silly install resolved        tarball: 'http://registry.npm.taobao.org/nan/download/nan-2.1.0.tgz' },
+167 silly install resolved     maintainers: [ [Object], [Object] ],
+167 silly install resolved     directories: {},
+167 silly install resolved     publish_time: 1444315187658,
+167 silly install resolved     _cnpm_publish_time: 1444315187658,
+167 silly install resolved     readme: 'ERROR: No README data found!' } ]
+168 info install nan@2.1.0 into /Users/mango/web/app/psd-to-img/node_modules/canvas
+169 info installOne nan@2.1.0
+170 verbose installOne of nan to /Users/mango/web/app/psd-to-img/node_modules/canvas not in flight; installing
+171 verbose lock using /Users/mango/.cnpm/_locks/nan-65b3bb3b39a1ee2e.lock for /Users/mango/web/app/psd-to-img/node_modules/canvas/node_modules/nan
+172 silly install write writing nan 2.1.0 to /Users/mango/web/app/psd-to-img/node_modules/canvas/node_modules/nan
+173 verbose unbuild node_modules/canvas/node_modules/nan
+174 silly gentlyRm /Users/mango/web/app/psd-to-img/node_modules/canvas/node_modules/nan is being purged from base /Users/mango/web/app/psd-to-img
+175 verbose gentlyRm don't care about contents; nuking /Users/mango/web/app/psd-to-img/node_modules/canvas/node_modules/nan
+176 verbose tar unpack /Users/mango/.cnpm/nan/2.1.0/package.tgz
+177 verbose tar unpacking to /Users/mango/web/app/psd-to-img/node_modules/canvas/node_modules/nan
+178 silly gentlyRm /Users/mango/web/app/psd-to-img/node_modules/canvas/node_modules/nan is being purged
+179 verbose gentlyRm don't care about contents; nuking /Users/mango/web/app/psd-to-img/node_modules/canvas/node_modules/nan
+180 silly gunzTarPerm modes [ '755', '644' ]
+181 silly gunzTarPerm extractEntry package.json
+182 silly gunzTarPerm modified mode [ 'package.json', 436, 420 ]
+183 silly gunzTarPerm extractEntry README.md
+184 silly gunzTarPerm modified mode [ 'README.md', 436, 420 ]
+185 silly gunzTarPerm extractEntry include_dirs.js
+186 silly gunzTarPerm modified mode [ 'include_dirs.js', 436, 420 ]
+187 silly gunzTarPerm extractEntry nan_converters.h
+188 silly gunzTarPerm modified mode [ 'nan_converters.h', 436, 420 ]
+189 silly gunzTarPerm extractEntry LICENSE.md
+190 silly gunzTarPerm modified mode [ 'LICENSE.md', 436, 420 ]
+191 silly gunzTarPerm extractEntry .dntrc
+192 silly gunzTarPerm modified mode [ '.dntrc', 436, 420 ]
+193 silly gunzTarPerm extractEntry appveyor.yml
+194 silly gunzTarPerm modified mode [ 'appveyor.yml', 436, 420 ]
+195 silly gunzTarPerm extractEntry doc/new.md
+196 silly gunzTarPerm modified mode [ 'doc/new.md', 436, 420 ]
+197 silly gunzTarPerm extractEntry doc/.build.sh
+198 silly gunzTarPerm modified mode [ 'doc/.build.sh', 509, 493 ]
+199 silly gunzTarPerm extractEntry doc/buffers.md
+200 silly gunzTarPerm modified mode [ 'doc/buffers.md', 436, 420 ]
+201 silly gunzTarPerm extractEntry doc/callback.md
+202 silly gunzTarPerm modified mode [ 'doc/callback.md', 436, 420 ]
+203 silly gunzTarPerm extractEntry doc/converters.md
+204 silly gunzTarPerm modified mode [ 'doc/converters.md', 436, 420 ]
+205 silly gunzTarPerm extractEntry doc/errors.md
+206 silly gunzTarPerm modified mode [ 'doc/errors.md', 436, 420 ]
+207 silly gunzTarPerm extractEntry doc/maybe_types.md
+208 silly gunzTarPerm modified mode [ 'doc/maybe_types.md', 436, 420 ]
+209 silly gunzTarPerm extractEntry doc/methods.md
+210 silly gunzTarPerm modified mode [ 'doc/methods.md', 436, 420 ]
+211 silly gunzTarPerm extractEntry doc/asyncworker.md
+212 silly gunzTarPerm modified mode [ 'doc/asyncworker.md', 436, 420 ]
+213 silly gunzTarPerm extractEntry doc/node_misc.md
+214 silly gunzTarPerm modified mode [ 'doc/node_misc.md', 436, 420 ]
+215 silly gunzTarPerm extractEntry doc/persistent.md
+216 silly gunzTarPerm modified mode [ 'doc/persistent.md', 436, 420 ]
+217 silly gunzTarPerm extractEntry doc/scopes.md
+218 silly gunzTarPerm modified mode [ 'doc/scopes.md', 436, 420 ]
+219 silly gunzTarPerm extractEntry doc/script.md
+220 silly gunzTarPerm modified mode [ 'doc/script.md', 436, 420 ]
+221 silly gunzTarPerm extractEntry doc/string_bytes.md
+222 silly gunzTarPerm modified mode [ 'doc/string_bytes.md', 436, 420 ]
+223 silly gunzTarPerm extractEntry doc/v8_internals.md
+224 silly gunzTarPerm modified mode [ 'doc/v8_internals.md', 436, 420 ]
+225 silly gunzTarPerm extractEntry doc/v8_misc.md
+226 silly gunzTarPerm modified mode [ 'doc/v8_misc.md', 436, 420 ]
+227 silly gunzTarPerm extractEntry nan.h
+228 silly gunzTarPerm modified mode [ 'nan.h', 436, 420 ]
+229 silly gunzTarPerm extractEntry nan_callbacks.h
+230 silly gunzTarPerm modified mode [ 'nan_callbacks.h', 436, 420 ]
+231 silly gunzTarPerm extractEntry nan_callbacks_12_inl.h
+232 silly gunzTarPerm modified mode [ 'nan_callbacks_12_inl.h', 436, 420 ]
+233 silly gunzTarPerm extractEntry nan_callbacks_pre_12_inl.h
+234 silly gunzTarPerm modified mode [ 'nan_callbacks_pre_12_inl.h', 436, 420 ]
+235 silly gunzTarPerm extractEntry nan_converters_43_inl.h
+236 silly gunzTarPerm modified mode [ 'nan_converters_43_inl.h', 436, 420 ]
+237 silly gunzTarPerm extractEntry nan_converters_pre_43_inl.h
+238 silly gunzTarPerm modified mode [ 'nan_converters_pre_43_inl.h', 436, 420 ]
+239 silly gunzTarPerm extractEntry nan_implementation_12_inl.h
+240 silly gunzTarPerm modified mode [ 'nan_implementation_12_inl.h', 436, 420 ]
+241 silly gunzTarPerm extractEntry nan_implementation_pre_12_inl.h
+242 silly gunzTarPerm modified mode [ 'nan_implementation_pre_12_inl.h', 436, 420 ]
+243 silly gunzTarPerm extractEntry nan_maybe_43_inl.h
+244 silly gunzTarPerm modified mode [ 'nan_maybe_43_inl.h', 436, 420 ]
+245 silly gunzTarPerm extractEntry nan_maybe_pre_43_inl.h
+246 silly gunzTarPerm modified mode [ 'nan_maybe_pre_43_inl.h', 436, 420 ]
+247 silly gunzTarPerm extractEntry nan_new.h
+248 silly gunzTarPerm modified mode [ 'nan_new.h', 436, 420 ]
+249 silly gunzTarPerm extractEntry nan_object_wrap.h
+250 silly gunzTarPerm modified mode [ 'nan_object_wrap.h', 436, 420 ]
+251 silly gunzTarPerm extractEntry nan_persistent_12_inl.h
+252 silly gunzTarPerm modified mode [ 'nan_persistent_12_inl.h', 436, 420 ]
+253 silly gunzTarPerm extractEntry nan_persistent_pre_12_inl.h
+254 silly gunzTarPerm modified mode [ 'nan_persistent_pre_12_inl.h', 436, 420 ]
+255 silly gunzTarPerm extractEntry nan_string_bytes.h
+256 silly gunzTarPerm modified mode [ 'nan_string_bytes.h', 436, 420 ]
+257 silly gunzTarPerm extractEntry nan_typedarray_contents.h
+258 silly gunzTarPerm modified mode [ 'nan_typedarray_contents.h', 436, 420 ]
+259 silly gunzTarPerm extractEntry nan_weak.h
+260 silly gunzTarPerm modified mode [ 'nan_weak.h', 436, 420 ]
+261 silly gunzTarPerm extractEntry CHANGELOG.md
+262 silly gunzTarPerm modified mode [ 'CHANGELOG.md', 436, 420 ]
+263 silly gunzTarPerm extractEntry tools/package.json
+264 silly gunzTarPerm modified mode [ 'tools/package.json', 436, 420 ]
+265 silly gunzTarPerm extractEntry tools/README.md
+266 silly gunzTarPerm modified mode [ 'tools/README.md', 436, 420 ]
+267 silly gunzTarPerm extractEntry tools/1to2.js
+268 silly gunzTarPerm modified mode [ 'tools/1to2.js', 509, 493 ]
+269 verbose write writing to /Users/mango/web/app/psd-to-img/node_modules/canvas/node_modules/nan/package.json
+270 info preinstall nan@2.1.0
+271 verbose readDependencies loading dependencies from /Users/mango/web/app/psd-to-img/node_modules/canvas/node_modules/nan/package.json
+272 verbose readDependencies loading dependencies from /Users/mango/web/app/psd-to-img/node_modules/canvas/node_modules/nan/package.json
+273 silly install resolved []
+274 verbose about to build /Users/mango/web/app/psd-to-img/node_modules/canvas/node_modules/nan
+275 info build /Users/mango/web/app/psd-to-img/node_modules/canvas/node_modules/nan
+276 info linkStuff nan@2.1.0
+277 silly linkStuff nan@2.1.0 has /Users/mango/web/app/psd-to-img/node_modules/canvas/node_modules as its parent node_modules
+278 verbose linkBins nan@2.1.0
+279 verbose linkMans nan@2.1.0
+280 verbose rebuildBundles nan@2.1.0
+281 info install nan@2.1.0
+282 info postinstall nan@2.1.0
+283 verbose unlock done using /Users/mango/.cnpm/_locks/nan-65b3bb3b39a1ee2e.lock for /Users/mango/web/app/psd-to-img/node_modules/canvas/node_modules/nan
+284 verbose about to build /Users/mango/web/app/psd-to-img/node_modules/canvas
+285 info build /Users/mango/web/app/psd-to-img/node_modules/canvas
+286 info linkStuff canvas@1.3.4
+287 silly linkStuff canvas@1.3.4 has /Users/mango/web/app/psd-to-img/node_modules as its parent node_modules
+288 verbose linkBins canvas@1.3.4
+289 verbose linkMans canvas@1.3.4
+290 verbose rebuildBundles canvas@1.3.4
+291 verbose rebuildBundles [ 'nan' ]
+292 info install canvas@1.3.4
+293 verbose unsafe-perm in lifecycle true
+294 info canvas@1.3.4 Failed to exec install script
+295 verbose unlock done using /Users/mango/.cnpm/_locks/canvas-2c7110ce7fe418a0.lock for /Users/mango/web/app/psd-to-img/node_modules/canvas
+296 verbose stack Error: canvas@1.3.4 install: `node-gyp rebuild`
+296 verbose stack Exit status 1
+296 verbose stack     at EventEmitter.<anonymous> (/usr/local/lib/node_modules/cnpm/node_modules/npm/lib/utils/lifecycle.js:213:16)
+296 verbose stack     at emitTwo (events.js:87:13)
+296 verbose stack     at EventEmitter.emit (events.js:172:7)
+296 verbose stack     at ChildProcess.<anonymous> (/usr/local/lib/node_modules/cnpm/node_modules/npm/lib/utils/spawn.js:14:12)
+296 verbose stack     at emitTwo (events.js:87:13)
+296 verbose stack     at ChildProcess.emit (events.js:172:7)
+296 verbose stack     at maybeClose (internal/child_process.js:764:16)
+296 verbose stack     at Process.ChildProcess._handle.onexit (internal/child_process.js:211:5)
+297 verbose pkgid canvas@1.3.4
+298 verbose cwd /Users/mango/web/app/psd-to-img
+299 error Darwin 15.0.0
+300 error argv "/usr/local/bin/iojs" "/usr/local/lib/node_modules/cnpm/node_modules/.bin/npm" "--userconfig=/Users/mango/.cnpmrc" "--disturl=https://npm.taobao.org/mirrors/iojs" "--cache=/Users/mango/.cnpm" "--registry=https://registry.npm.taobao.org" "--node-gyp=/usr/local/lib/node_modules/cnpm/node_modules/pangyp/bin/node-gyp.js" "install" "canvas"
+301 error node v3.3.0
+302 error npm  v2.7.6
+303 error code ELIFECYCLE
+304 error canvas@1.3.4 install: `node-gyp rebuild`
+304 error Exit status 1
+305 error Failed at the canvas@1.3.4 install script 'node-gyp rebuild'.
+305 error This is most likely a problem with the canvas package,
+305 error not with npm itself.
+305 error Tell the author that this fails on your system:
+305 error     node-gyp rebuild
+305 error You can get their info via:
+305 error     npm owner ls canvas
+305 error There is likely additional logging output above.
+306 verbose exit [ 1, true ]
+307 verbose unbuild node_modules/canvas
+308 info preuninstall canvas@1.3.4
+309 info uninstall canvas@1.3.4
+310 verbose unbuild rmStuff canvas@1.3.4 from /Users/mango/web/app/psd-to-img/node_modules
+311 info postuninstall canvas@1.3.4
+312 silly gentlyRm /Users/mango/web/app/psd-to-img/node_modules/canvas is being purged from base /Users/mango/web/app/psd-to-img
+313 verbose gentlyRm don't care about contents; nuking /Users/mango/web/app/psd-to-img/node_modules/canvas
+314 silly vacuum-fs purging /Users/mango/web/app/psd-to-img/node_modules/canvas
+315 silly vacuum-fs quitting because other entries in /Users/mango/web/app/psd-to-img/node_modules

@@ -24,8 +24,7 @@ function pdfToImage(newPath, pngPath) {
 	var pdfImage = new PDFImage(newPath);
 	pdfImage.convertPage(0).then(function(imagePath) {
 
-		console.log(imagePath);
-		fs.existsSync(pngPath);
+		fs.existsSync('../DB/test.png');
 	});
 }
 
@@ -139,6 +138,11 @@ exports.addItem = function(req, res) {
 		res.redirect('/list/' + fields.author_id);
 	});
 
+}
+
+// 添加文件夹
+exports.addDirector = function(req) {
+	
 }
 
 // 增加新的组

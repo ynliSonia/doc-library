@@ -1,16 +1,16 @@
-<!doctype html>
-
 <html>
     <head>
         <meta name="charset" content="utf-8" />
         <title>{{title}}</title>
         <link type="text/css" href="/assets/build/lib/bootstrap.min.css" rev="stylesheet" rel="stylesheet"/>
         <link type="text/css" href="/assets/build/p/{{pageName}}/index.css" rev="stylesheet" rel="stylesheet"/>
+
     </head>
     <body>
-        {{include ("./nav.xtpl") }}
-        {{{block ("body")}}}
-        <script src="/assets/build/lib/jquery.min.js"></script>
-        <script src="/assets/build/p/{{pageName}}/index.js"></script>
+        <div class="library-detail">
+			<img src="{{docPath}}" />
+		</div>
     </body>
+    <script src="/assets/build/lib/jquery.min.js"></script>
+    <script src="/assets/build/p/{{pageName}}/index.js"></script>
 </html>

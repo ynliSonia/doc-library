@@ -22,10 +22,20 @@
 
 		List.prototype = {
 
-			init: function init() {},
+			init: function init() {
+				this.bindEvents();
+			},
 
 			bindEvents: function bindEvents() {
-				$('.J_add_doc').on('click', function () {});
+				$('.J_add_doc').on('click', function () {
+					$('.J_doc_file').click();
+				});
+
+				$('.J_doc_file').on('change', function () {
+					$('#J_doc_form').submit();
+				});
 			}
 		};
+
+		new List();
 	}, {}] }, {}, [1]);
