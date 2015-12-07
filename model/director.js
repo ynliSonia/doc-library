@@ -13,6 +13,12 @@ var helper = require('../helper');
 var db = helper.db;
 var dbName = 'directors';
 
+function psdToPng(newPath, pngPath) {
+	PSD.open(newPath).then(function(psd) {
+		var result = psd.image.saveAsPng(pngPath);
+		fs.renameSync(pngPath, result);
+	});
+}
 // 查找
 exports.find = function(query) {
 	db = helper.db;

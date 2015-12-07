@@ -34,6 +34,14 @@
 				$('.J_doc_file').on('change', function () {
 					$('#J_doc_form').submit();
 				});
+				$('.J_show_ewm').on('mousemove', function (ev) {
+					var $tar = $(ev.currentTarget);
+					$tar.siblings('img').fadeIn();
+				});
+				$('.J_show_ewm').on('mouseleave', function (ev) {
+					var $tar = $(ev.currentTarget);
+					$tar.siblings('img').fadeOut();
+				});
 			}
 		};
 

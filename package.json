@@ -11,6 +11,7 @@
     "jade": "^1.9.2",
     "mongodb": "^2.0.49",
     "mongoskin": "^2.0.3",
+    "node-qrcode": "0.0.2",
     "pdf-image": "^1.0.1",
     "psd": "^3.1.0",
     "xtemplate": "^4.2.2",

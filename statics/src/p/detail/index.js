@@ -23,16 +23,26 @@ Detail.prototype = {
 
 	init: function() {
 		this.setStyle();
+		this.isSupportExt();
 	},
 
 	setStyle: function() {
-
-		console.log(isPC());
 		// 如果不是 PC 的话
 		if(!isPC()) {
 			var window_wid = $(window).width();
 			$('.library-detail img').width(window_wid);
 		}
+	},
+
+	isSupportExt: function() {
+		var imgSrc = $('.library-detail img').attr('src');
+		var extName = imgSrc.indexOf('/default/');
+		var extList = ['png', 'jpg', 'jpeg', 'gif'];
+		if(imgSrc.indexOf('/default/') < 0) {
+			return ;
+		}
+		$('.library-detail').html('<h2>很抱歉，暂时不支持该文档类型的预览~</h2>');
+
 	}
 }
 

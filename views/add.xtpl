@@ -17,12 +17,6 @@
                 </div>
             </div>
             <div class="form-group">
-                <label for="J_author" class="col-sm-2 control-label">创建人：</label>
-                <div class="col-xs-3">
-                  <input type="text" name="author" id="J_author" class="form-control" rows="3" />
-                </div>
-            </div>
-            <div class="form-group">
                 <label for="J_doc_cont" class="col-sm-2 control-label">上传文档</label>
                 <div class="col-xs-3">
                     <input type="file" class="form-control" name="ppt_cont" id="J_doc_cont" />

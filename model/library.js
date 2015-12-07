@@ -4,15 +4,18 @@ var path = require('path');
 var formidable = require('formidable');
 var PSD = require('psd');
 var PdfImage = require('pdf-image');
+var qrcode = require('node-qrcode');
 
 var dataPath = path.resolve(__dirname, '../DB/task.json');
 var groupPath = path.resolve(__dirname, '../DB/group.json');
 var publick = path.resolve(__dirname, '../DB/publick/');
+var qrcodeDir = path.resolve(__dirname, '../DB/qrcode/');
 
 var helper = require('../helper');
 var db = helper.db;
 var dbName = 'libraries';
 
+// 设置默认图片
 function setDefaultImg(extName) {
 	var imgPath = '';
 	switch(extName) {
@@ -56,6 +59,31 @@ function pdfToImage(newPath, pngPath) {
 	});
 }
 
+// 自定义，判断某个值是否在列表中
+function inArray(value, list) {
+	var listLen = list.length;
+	var flag = false;
+	for(var i = 0; i < listLen; i++) {
+		if(value === list[i]) {
+			flag = true;
+			break;
+		}
+	}
+	return flag;
+}
+
+function generatorQRCode(text, qrcodePath, callback) {
+
+	qrcode({
+	  text: text,
+	  size: 200,
+	  qrcodePath: qrcodePath,
+	  browser: 'chrome'
+	}).then(function(qrcodePath) {
+	 	callback && callback(qrcodePath);  // balabala/node-qrcode/qrcode.png
+	});
+}
+
 // 查找
 exports.find = function(query) {
 	db = helper.db;
@@ -87,38 +115,44 @@ exports.add = function(req, res) {
 		var docsList = docLength ? files.docs : [files.docs];
 		docLength = docLength || 1;
 		var doc;
+
 		for(var i = 0; i < docLength; i++) {
 
 
 			(function(i){
 				doc = docsList[i];
-				var name = doc.name.substring(0, doc.name.lastIndexOf("."));
-			    switch (doc.type) {
-			      case 'image/pjpeg':
-			        extName = 'jpg';
-			        break;
-			      case 'image/jpeg':
-			        extName = 'jpg';
-			        break;
-			      case 'image/png':
-			        extName = 'png';
-			        break;
-			      case 'image/x-png':
-			        extName = 'png';
-			        break;
-			      case 'image/vnd.adobe.photoshop':
-			       	extName = 'psd';
-			       	break;
-			      case 'image/gif':
-			      	extName='gif';
-			      	break;
-			      case 'application/pdf':
-			      	extName = 'pdf';
-			      	break;
-			      case 'application/zip':
-			      	extName = 'zip';
-			      	break;
-			    }
+				var name = doc.name; //.substring(0, doc.name.lastIndexOf("."));
+				extName = doc.name.substring(doc.name.lastIndexOf(".") + 1).toLowerCase();
+				var extList = ['jpg', 'jpeg', 'png', 'gif', 'psd', 'pdf', 'doc', 'docx', 'zip', 'rar', 'gzip', 'xlsx', 'xls', 'xlsm', 'xltx', 'xlsb', 'ppt', 'txt'];
+				if(!inArray(extName, extList)) {
+					return;
+				}
+			    // switch (doc.type) {
+			    //   case 'image/pjpeg':
+			    //     extName = 'jpg';
+			    //     break;
+			    //   case 'image/jpeg':
+			    //     extName = 'jpg';
+			    //     break;
+			    //   case 'image/png':
+			    //     extName = 'png';
+			    //     break;
+			    //   case 'image/x-png':
+			    //     extName = 'png';
+			    //     break;
+			    //   case 'image/vnd.adobe.photoshop':
+			    //    	extName = 'psd';
+			    //    	break;
+			    //   case 'image/gif':
+			    //   	extName='gif';
+			    //   	break;
+			    //   case 'application/pdf':
+			    //   	extName = 'pdf';
+			    //   	break;
+			    //   case 'application/zip':
+			    //   	extName = 'zip';
+			    //   	break;
+			    // }
 
 			    // 判断后缀名是否正确， 如果不正确则不写入数据库
 			    if(extName === '') return false;
@@ -138,7 +172,8 @@ exports.add = function(req, res) {
 		   		if(extName === 'pdf') {
 		   			pdfToImage(newPath, pngPath);
 		   		}
-		   		(function(name, i){
+		   		(function(name, i, extName){
+
 			   		self.find({})
 			   			.then(function(libraries) {
 			   				libraries.sort(function(a, b) {
@@ -146,8 +181,8 @@ exports.add = function(req, res) {
 			   				});
 
 			   				var id = libraries[0] ? parseInt(libraries[0].id) + 1 + i : 1000000;
-			   				if(!libraries[0] && i === 1) {
-			   					id = 1000001;
+			   				if(!libraries[0]) {
+			   					id = 1000000 + i;
 			   				}
 			   				var docPath = '/docs/publick/' + avatarName + '.' + extName;
 
@@ -157,18 +192,24 @@ exports.add = function(req, res) {
 							if(setDefaultImg(extName) !== '') {
 								docPath = setDefaultImg(extName);
 							}
-							var item = {
-								id: id,
-								docPath: docPath,
-								download: '/docs/publick/' + avatarName + '.' + extName,
-								director_id: fields.director_id,
-								name: name
-							}
+							generatorQRCode('http://172.16.11.98:8181/detail/' + id, qrcodeDir + '/qrcode_' + avatarName + '.png', function(qrcodePath) {
+								// fs.renameSync('/docs/qrcode/qrcode_' + avatarName + '.png', qrcodePath);
+								var item = {
+									id: id,
+									docPath: docPath,
+									download: '/docs/publick/' + avatarName + '.' + extName,
+									director_id: fields.director_id,
+									name: name,
+									qrcodePath: '/docs/qrcode/qrcode_' + avatarName + '.png'
+								}
 
-							db.insert(dbName, item);
-							res.redirect('/doc-list/' + fields.director_id);
+								db.insert(dbName, item);
+								if(i === docLength - 1) {
+									res.redirect('/doc-list/' + fields.director_id);
+								}
+							})
 			   			})
-			   		})(name, i);
+			   		})(name, i, extName);
 			})(i)
 		}
 	});

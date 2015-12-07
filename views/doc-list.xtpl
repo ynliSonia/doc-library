@@ -22,7 +22,8 @@
 						<div class="time-show">
 							<a class="author" href="./">{{this.author}}</a>
 							<div class="icons">
-								<a href="javascript:;" class="ps-icon-font">&#xe602;</a>
+								<a href="javascript:;" class="ps-icon-font J_show_ewm">&#xe602;</a>
+								<img src={{this.qrcodePath}} width="150" />
 								<a href="{{this.download}}" download class="ps-icon-font">&#xe604;</a>
 							</div>
 						</div>

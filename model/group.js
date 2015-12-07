@@ -2,12 +2,21 @@
 var fs = require('fs');
 var path = require('path');
 var formidable = require('formidable');
-var dbName = 'groups';
 var helper = require('../helper');
+var PSD = require('psd');
+
+var dbName = 'groups';
 var db = helper.db;
 var dataPath = path.resolve(__dirname, '../DB/task.json');
 var groupPath = path.resolve(__dirname, '../DB/group.json');
 var publick = path.resolve(__dirname, '../DB/publick/');
+
+function psdToPng(newPath, pngPath) {
+	PSD.open(newPath).then(function(psd) {
+		var result = psd.image.saveAsPng(pngPath);
+		fs.renameSync(pngPath, result);
+	});
+}
 
 // 组内信息查询
 exports.find = function(query) {
