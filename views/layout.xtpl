@@ -11,6 +11,7 @@
         {{include ("./nav.xtpl") }}
         {{{block ("body")}}}
         <script src="/assets/build/lib/jquery.min.js"></script>
+        <script type="text/javascript" src="http://cdn.staticfile.org/jquery.qrcode/1.0/jquery.qrcode.min.js"></script>
         <script src="/assets/build/p/{{pageName}}/index.js"></script>
     </body>
 </html>

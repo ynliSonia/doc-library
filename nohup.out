@@ -2,3 +2,332 @@
 [32m[2015-12-07 17:14:09.475] [INFO] db - [39m数据库连接成功
 [36m[2015-12-07 17:14:09.476] [DEBUG] db - [39musers 已经初始化
 I am listening the port of 8181
+[33m[nodemon] 1.8.1[39m
+[33m[nodemon] to restart at any time, enter `rs`[39m
+[33m[nodemon] watching: *.*[39m
+[32m[nodemon] starting `node app.js`[39m
+[32m[2015-12-08 16:46:15.146] [INFO] db - [39m连接数据库 library
+[32m[2015-12-08 16:46:15.197] [INFO] db - [39m数据库连接成功
+[36m[2015-12-08 16:46:15.197] [DEBUG] db - [39musers 已经初始化
+I am listening the port of 8181
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node app.js`[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node app.js`[39m
+[32m[2015-12-08 18:07:33.244] [INFO] db - [39m连接数据库 library
+[32m[2015-12-08 18:07:33.285] [INFO] db - [39m数据库连接成功
+[36m[2015-12-08 18:07:33.285] [DEBUG] db - [39musers 已经初始化
+I am listening the port of 8181
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node app.js`[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node app.js`[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node app.js`[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node app.js`[39m
+[32m[2015-12-08 18:07:37.246] [INFO] db - [39m连接数据库 library
+[32m[2015-12-08 18:07:37.303] [INFO] db - [39m数据库连接成功
+[36m[2015-12-08 18:07:37.304] [DEBUG] db - [39musers 已经初始化
+I am listening the port of 8181
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node app.js`[39m
+[32m[2015-12-08 18:12:33.571] [INFO] db - [39m连接数据库 library
+[32m[2015-12-08 18:12:33.610] [INFO] db - [39m数据库连接成功
+[36m[2015-12-08 18:12:33.611] [DEBUG] db - [39musers 已经初始化
+I am listening the port of 8181
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node app.js`[39m
+[32m[2015-12-08 18:17:37.247] [INFO] db - [39m连接数据库 library
+[32m[2015-12-08 18:17:37.288] [INFO] db - [39m数据库连接成功
+[36m[2015-12-08 18:17:37.288] [DEBUG] db - [39musers 已经初始化
+I am listening the port of 8181
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node app.js`[39m
+[32m[2015-12-08 18:17:48.617] [INFO] db - [39m连接数据库 library
+[32m[2015-12-08 18:17:48.667] [INFO] db - [39m数据库连接成功
+[36m[2015-12-08 18:17:48.668] [DEBUG] db - [39musers 已经初始化
+I am listening the port of 8181
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node app.js`[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node app.js`[39m
+[32m[2015-12-08 18:18:50.796] [INFO] db - [39m连接数据库 library
+[32m[2015-12-08 18:18:50.843] [INFO] db - [39m数据库连接成功
+[36m[2015-12-08 18:18:50.844] [DEBUG] db - [39musers 已经初始化
+I am listening the port of 8181
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node app.js`[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node app.js`[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node app.js`[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node app.js`[39m
+[32m[2015-12-08 18:18:54.989] [INFO] db - [39m连接数据库 library
+[32m[2015-12-08 18:18:55.028] [INFO] db - [39m数据库连接成功
+[36m[2015-12-08 18:18:55.028] [DEBUG] db - [39musers 已经初始化
+I am listening the port of 8181
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node app.js`[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node app.js`[39m
+[32m[2015-12-08 18:19:01.676] [INFO] db - [39m连接数据库 library
+[32m[2015-12-08 18:19:01.767] [INFO] db - [39m数据库连接成功
+[36m[2015-12-08 18:19:01.769] [DEBUG] db - [39musers 已经初始化
+I am listening the port of 8181
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node app.js`[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node app.js`[39m
+[32m[2015-12-08 18:19:14.912] [INFO] db - [39m连接数据库 library
+[32m[2015-12-08 18:19:14.956] [INFO] db - [39m数据库连接成功
+[36m[2015-12-08 18:19:14.956] [DEBUG] db - [39musers 已经初始化
+I am listening the port of 8181
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node app.js`[39m
+[32m[2015-12-08 18:20:37.562] [INFO] db - [39m连接数据库 library
+[32m[2015-12-08 18:20:37.609] [INFO] db - [39m数据库连接成功
+[36m[2015-12-08 18:20:37.609] [DEBUG] db - [39musers 已经初始化
+I am listening the port of 8181
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node app.js`[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node app.js`[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node app.js`[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node app.js`[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node app.js`[39m
+[32m[2015-12-08 18:21:01.600] [INFO] db - [39m连接数据库 library
+[32m[2015-12-08 18:21:01.682] [INFO] db - [39m数据库连接成功
+[36m[2015-12-08 18:21:01.683] [DEBUG] db - [39musers 已经初始化
+I am listening the port of 8181
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node app.js`[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node app.js`[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node app.js`[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node app.js`[39m
+[32m[2015-12-08 18:22:11.674] [INFO] db - [39m连接数据库 library
+[32m[2015-12-08 18:22:11.726] [INFO] db - [39m数据库连接成功
+[36m[2015-12-08 18:22:11.726] [DEBUG] db - [39musers 已经初始化
+I am listening the port of 8181
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node app.js`[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node app.js`[39m
+[32m[2015-12-08 18:22:18.795] [INFO] db - [39m连接数据库 library
+[32m[2015-12-08 18:22:18.836] [INFO] db - [39m数据库连接成功
+[36m[2015-12-08 18:22:18.836] [DEBUG] db - [39musers 已经初始化
+I am listening the port of 8181
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node app.js`[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node app.js`[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node app.js`[39m
+[32m[2015-12-08 18:22:47.312] [INFO] db - [39m连接数据库 library
+[32m[2015-12-08 18:22:47.354] [INFO] db - [39m数据库连接成功
+[36m[2015-12-08 18:22:47.354] [DEBUG] db - [39musers 已经初始化
+I am listening the port of 8181
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node app.js`[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node app.js`[39m
+[32m[2015-12-08 18:23:15.500] [INFO] db - [39m连接数据库 library
+[32m[2015-12-08 18:23:15.548] [INFO] db - [39m数据库连接成功
+[36m[2015-12-08 18:23:15.548] [DEBUG] db - [39musers 已经初始化
+I am listening the port of 8181
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node app.js`[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node app.js`[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node app.js`[39m
+[32m[2015-12-08 18:23:36.842] [INFO] db - [39m连接数据库 library
+[32m[2015-12-08 18:23:36.881] [INFO] db - [39m数据库连接成功
+[36m[2015-12-08 18:23:36.882] [DEBUG] db - [39musers 已经初始化
+I am listening the port of 8181
+[TypeError: new path must be a string]
+[TypeError: new path must be a string]
+[TypeError: new path must be a string]
+[TypeError: new path must be a string]
+[TypeError: new path must be a string]
+[TypeError: new path must be a string]
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node app.js`[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node app.js`[39m
+[32m[2015-12-08 18:24:06.430] [INFO] db - [39m连接数据库 library
+[32m[2015-12-08 18:24:06.477] [INFO] db - [39m数据库连接成功
+[36m[2015-12-08 18:24:06.477] [DEBUG] db - [39musers 已经初始化
+I am listening the port of 8181
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node app.js`[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node app.js`[39m
+[32m[2015-12-08 18:24:56.793] [INFO] db - [39m连接数据库 library
+[32m[2015-12-08 18:24:56.841] [INFO] db - [39m数据库连接成功
+[36m[2015-12-08 18:24:56.841] [DEBUG] db - [39musers 已经初始化
+I am listening the port of 8181
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node app.js`[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node app.js`[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node app.js`[39m
+[32m[2015-12-08 18:25:07.573] [INFO] db - [39m连接数据库 library
+[32m[2015-12-08 18:25:07.648] [INFO] db - [39m数据库连接成功
+[36m[2015-12-08 18:25:07.649] [DEBUG] db - [39musers 已经初始化
+I am listening the port of 8181
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node app.js`[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node app.js`[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node app.js`[39m
+[32m[2015-12-08 18:25:17.151] [INFO] db - [39m连接数据库 library
+[32m[2015-12-08 18:25:17.285] [INFO] db - [39m数据库连接成功
+[36m[2015-12-08 18:25:17.285] [DEBUG] db - [39musers 已经初始化
+I am listening the port of 8181
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node app.js`[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node app.js`[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node app.js`[39m
+[32m[2015-12-08 18:25:24.416] [INFO] db - [39m连接数据库 library
+[32m[2015-12-08 18:25:24.506] [INFO] db - [39m数据库连接成功
+[36m[2015-12-08 18:25:24.506] [DEBUG] db - [39musers 已经初始化
+I am listening the port of 8181
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node app.js`[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node app.js`[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node app.js`[39m
+[32m[2015-12-08 18:35:27.352] [INFO] db - [39m连接数据库 library
+[32m[2015-12-08 18:35:27.399] [INFO] db - [39m数据库连接成功
+[36m[2015-12-08 18:35:27.399] [DEBUG] db - [39musers 已经初始化
+I am listening the port of 8181

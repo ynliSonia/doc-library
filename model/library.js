@@ -192,22 +192,34 @@ exports.add = function(req, res) {
 							if(setDefaultImg(extName) !== '') {
 								docPath = setDefaultImg(extName);
 							}
-							generatorQRCode('http://172.16.11.98:8181/detail/' + id, qrcodeDir + '/qrcode_' + avatarName + '.png', function(qrcodePath) {
-								// fs.renameSync('/docs/qrcode/qrcode_' + avatarName + '.png', qrcodePath);
-								var item = {
+							// generatorQRCode('http://172.16.11.98:8181/detail/' + id, qrcodeDir + '/qrcode_' + avatarName + '.png', function(qrcodePath) {
+							// 	// fs.renameSync('/docs/qrcode/qrcode_' + avatarName + '.png', qrcodePath);
+							// 	var item = {
+							// 		id: id,
+							// 		docPath: docPath,
+							// 		download: '/docs/publick/' + avatarName + '.' + extName,
+							// 		director_id: fields.director_id,
+							// 		name: name,
+							// 		qrcodePath: '/docs/qrcode/qrcode_' + avatarName + '.png'
+							// 	}
+
+							// 	db.insert(dbName, item);
+							// 	if(i === docLength - 1) {
+							// 		res.redirect('/doc-list/' + fields.director_id);
+							// 	}
+							// })
+							var item = {
 									id: id,
 									docPath: docPath,
 									download: '/docs/publick/' + avatarName + '.' + extName,
 									director_id: fields.director_id,
-									name: name,
-									qrcodePath: '/docs/qrcode/qrcode_' + avatarName + '.png'
+									name: name
 								}
 
 								db.insert(dbName, item);
 								if(i === docLength - 1) {
 									res.redirect('/doc-list/' + fields.director_id);
 								}
-							})
 			   			})
 			   		})(name, i, extName);
 			})(i)

@@ -23,7 +23,8 @@
 							<a class="author" href="./">{{this.author}}</a>
 							<div class="icons">
 								<a href="javascript:;" class="ps-icon-font J_show_ewm">&#xe602;</a>
-								<img src={{this.qrcodePath}} width="150" />
+								<div class="J_qrcode qrcode-box" data-url="/detail/{{this.id}}">
+								</div>
 								<a href="{{this.download}}" download class="ps-icon-font">&#xe604;</a>
 							</div>
 						</div>
@@ -34,5 +35,4 @@
 			</ul>
 		</div>
 	</div>
-
 {{/block}}
