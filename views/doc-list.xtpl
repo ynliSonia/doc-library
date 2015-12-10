@@ -20,7 +20,6 @@
 					<div class="infos">
 						<p class="name"><a href="./">{{this.name}}</a></p>
 						<div class="time-show">
-							<a class="author" href="./">{{this.author}}</a>
 							<div class="icons">
 								<a href="javascript:;" class="ps-icon-font J_show_ewm">&#xe602;</a>
 								<div class="J_qrcode qrcode-box" data-url="/detail/{{this.id}}">

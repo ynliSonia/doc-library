@@ -4,6 +4,7 @@ var path = require('path');
 var formidable = require('formidable');
 var helper = require('../helper');
 var PSD = require('psd');
+var Promise = require('bluebird');
 
 var dbName = 'groups';
 var db = helper.db;
@@ -35,60 +36,66 @@ exports.add = function(req) {
 	form.keepExtensions = true;  //  保留后缀
 	form.maxFieldsSize = 2 * 1024 * 1024;   // 最大的文件大小
 
-	form.parse(req, function(err, fields, files) {
+	return new Promise(function(resolve, reject) {
+		form.parse(req, function(err, fields, files) {
 
-		if(err) {
-			console.log(err);
-			return ;
-		}
-
-		// 根据类型确定文件的后缀名
-		var extName = '';  //后缀名
-	    switch (files.photo.type) {
-	      case 'image/pjpeg':
-	        extName = 'jpg';
-	        break;
-	      case 'image/jpeg':
-	        extName = 'jpg';
-	        break;
-	      case 'image/png':
-	        extName = 'png';
-	        break;
-	      case 'image/x-png':
-	        extName = 'png';
-	        break;
-	      case 'image/gif':
-	      	extName='gif';
-	      	break;
-	    }
-
-	    if(extName === '') return ;
-	    var avatarName = new Date().getTime();
-
-    	var newPath = form.uploadDir + '/' + avatarName + '.' + extName;
-
-    	// 把源文件传入
-    	fs.renameSync(files.photo.path, newPath);
-
-		// var id = 10000 + 3;
-		self.find({})
-		  .then(function(groups) {
-		  	groups.sort(function(a, b) {
-		  		return a.id < b.id ? 1 : -1;
-		  	});
-		  	var id = groups[0] ? groups[0].id + 1 : 10000;
-		  	var times = new Date();
-
-			var item = {
-				name: fields.name,
-				identity: fields.identity,
-				photo: '/docs/photos/' + avatarName + '.' + extName,
-				id: id,
-				times: times
+			if(err) {
+				reject(-1, '系统错误');   // -1 系统错误
+				return ;
 			}
 
-			db.insert('groups', item);
-		  })
+			// 根据类型确定文件的后缀名
+			var extName = '';  //后缀名
+		    switch (files.photo.type) {
+		      case 'image/pjpeg':
+		        extName = 'jpg';
+		        break;
+		      case 'image/jpeg':
+		        extName = 'jpg';
+		        break;
+		      case 'image/png':
+		        extName = 'png';
+		        break;
+		      case 'image/x-png':
+		        extName = 'png';
+		        break;
+		      case 'image/gif':
+		      	extName='gif';
+		      	break;
+		    }
+
+	    	if(extName === '') {
+	    		reject(-2, '不支持该类型的文件');
+	    		return ;
+	    	}
+	    	var avatarName = new Date().getTime();
+
+    		var newPath = form.uploadDir + '/' + avatarName + '.' + extName;
+
+	    	// 把源文件传入
+	    	fs.renameSync(files.photo.path, newPath);
+
+			// var id = 10000 + 3;
+			self.find({})
+			  .then(function(groups) {
+			  	groups.sort(function(a, b) {
+			  		return a.id < b.id ? 1 : -1;
+			  	});
+			  	var id = groups[0] ? groups[0].id + 1 : 10000;
+			  	var times = new Date();
+
+				var item = {
+					name: fields.name,
+					identity: fields.identity,
+					photo: '/docs/photos/' + avatarName + '.' + extName,
+					id: id,
+					times: times
+				}
+
+				db.insert('groups', item);
+				resolve();
+			  })
+		});
 	});
 }
 

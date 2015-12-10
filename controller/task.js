@@ -29,8 +29,12 @@ exports.newGroup = function(req, res, next) {
 
 // 新增分组接口
 exports.addGroup = function(req, res, next) {
-	Group.add(req);
-	res.redirect('/');
+	Group.add(req)
+		.then(function() {
+			res.redirect('/');
+		}, function(status, text) {
+			res.json({success: false, status: status, text: text});
+		});
 }
 
 // 文件夹列表页面
@@ -55,7 +59,13 @@ exports.newDirector = function(req, res, next) {
 }
 // 新增文件夹接口
 exports.addDirector = function(req, res, next) {
-	Director.add(req, res);
+	Director.add(req)
+		.then(function(id) {
+			res.redirect('/list/' + id);
+
+		}, function(obj) {
+			res.json({success: false, status: obj.status, text: obj.text});
+		});
 }
 
 // 文档列表
@@ -79,7 +89,13 @@ exports.new = function(req, res, next) {
 exports.addDoc = function(req, res, next) {
 
 	// task.addItem(req, res);
-	Library.add(req, res);
+	Library.add(req)
+		.then(function(id) {
+			res.redirect('/doc-list/' + id);
+	}, function(text) {
+		console.log(text);
+		res.json({status: 0, text: 'text'});
+	});
 }
 
 // 删除

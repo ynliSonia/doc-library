@@ -5,6 +5,7 @@ var formidable = require('formidable');
 var PSD = require('psd');
 var PdfImage = require('pdf-image');
 var qrcode = require('node-qrcode');
+var Promise = require('bluebird');
 
 var dataPath = path.resolve(__dirname, '../DB/task.json');
 var groupPath = path.resolve(__dirname, '../DB/group.json');
@@ -102,129 +103,105 @@ exports.add = function(req, res) {
 	form.maxFieldsSize = 2 * 1024 * 1024;   // 最大的文件大小
 	form.multiples = true;
 
-	form.parse(req, function(err, fields, files) {
+	return new Promise(function(resolve, reject) {
+		form.parse(req, function(err, fields, files) {
 
-		if(err) {
-			console.log(err);
-			return false;
-		}
+			if(err) {
+				reject('系统错误');
+				return ;
+			}
 
-		// 根据类型确定文件的后缀名
-		var extName = '';  //后缀名
-		var docLength = files.docs.length;
-		var docsList = docLength ? files.docs : [files.docs];
-		docLength = docLength || 1;
-		var doc;
+			// 根据类型确定文件的后缀名
+			var extName = '';  //后缀名
+			var docLength = files.docs.length;
+			var docsList = docLength ? files.docs : [files.docs];
+			docLength = docLength || 1;
+			var doc;
 
-		for(var i = 0; i < docLength; i++) {
+			for(var i = 0; i < docLength; i++) {
 
+				(function(i){
+					doc = docsList[i];
+					var name = doc.name; //.substring(0, doc.name.lastIndexOf("."));
+					extName = doc.name.substring(doc.name.lastIndexOf(".") + 1).toLowerCase();
+					var extList = ['jpg', 'jpeg', 'png', 'gif', 'psd', 'pdf', 'doc', 'docx', 'zip', 'rar', 'gzip', 'xlsx', 'xls', 'xlsm', 'xltx', 'xlsb', 'ppt', 'txt'];
+					if(!inArray(extName, extList)) {
+						reject('暂时不支持该类型文件的上传');
+						return ;
+					}
+				    // 判断后缀名是否正确， 如果不正确则不写入数据库
+				    if(extName === '') return false;
+				    var avatarName = new Date().getTime() + i;
 
-			(function(i){
-				doc = docsList[i];
-				var name = doc.name; //.substring(0, doc.name.lastIndexOf("."));
-				extName = doc.name.substring(doc.name.lastIndexOf(".") + 1).toLowerCase();
-				var extList = ['jpg', 'jpeg', 'png', 'gif', 'psd', 'pdf', 'doc', 'docx', 'zip', 'rar', 'gzip', 'xlsx', 'xls', 'xlsm', 'xltx', 'xlsb', 'ppt', 'txt'];
-				if(!inArray(extName, extList)) {
-					return;
-				}
-			    // switch (doc.type) {
-			    //   case 'image/pjpeg':
-			    //     extName = 'jpg';
-			    //     break;
-			    //   case 'image/jpeg':
-			    //     extName = 'jpg';
-			    //     break;
-			    //   case 'image/png':
-			    //     extName = 'png';
-			    //     break;
-			    //   case 'image/x-png':
-			    //     extName = 'png';
-			    //     break;
-			    //   case 'image/vnd.adobe.photoshop':
-			    //    	extName = 'psd';
-			    //    	break;
-			    //   case 'image/gif':
-			    //   	extName='gif';
-			    //   	break;
-			    //   case 'application/pdf':
-			    //   	extName = 'pdf';
-			    //   	break;
-			    //   case 'application/zip':
-			    //   	extName = 'zip';
-			    //   	break;
-			    // }
+			    	var newPath = form.uploadDir + '/' + avatarName + '.' + extName;
+			    	var pngPath = form.uploadDir + '/' + avatarName + '.' + 'png';
 
-			    // 判断后缀名是否正确， 如果不正确则不写入数据库
-			    if(extName === '') return false;
-			    var avatarName = new Date().getTime() + i;
+			    	// 把源文件传入
+			    	fs.renameSync(doc.path, newPath);
 
-		    	var newPath = form.uploadDir + '/' + avatarName + '.' + extName;
-		    	var pngPath = form.uploadDir + '/' + avatarName + '.' + 'png';
+			    	// 把 PSD文件转为 png 存储，方便查看
 
-		    	// 把源文件传入
-		    	fs.renameSync(doc.path, newPath);
+			    	if(extName === 'psd'){
+				    	psdToPng(newPath, pngPath);
+			   		}
+			   		if(extName === 'pdf') {
+			   			pdfToImage(newPath, pngPath);
+			   		}
+			   		(function(name, i, extName){
 
-		    	// 把 PSD文件转为 png 存储，方便查看
+				   		self.find({})
+				   			.then(function(libraries) {
+				   				libraries.sort(function(a, b) {
+				   					return a.id < b.id ? 1 : -1;
+				   				});
 
-		    	if(extName === 'psd'){
-			    	psdToPng(newPath, pngPath);
-		   		}
-		   		if(extName === 'pdf') {
-		   			pdfToImage(newPath, pngPath);
-		   		}
-		   		(function(name, i, extName){
+				   				var id = libraries[0] ? parseInt(libraries[0].id) + 1 + i : 1000000;
+				   				if(!libraries[0]) {
+				   					id = 1000000 + i;
+				   				}
+				   				var docPath = '/docs/publick/' + avatarName + '.' + extName;
 
-			   		self.find({})
-			   			.then(function(libraries) {
-			   				libraries.sort(function(a, b) {
-			   					return a.id < b.id ? 1 : -1;
-			   				});
-
-			   				var id = libraries[0] ? parseInt(libraries[0].id) + 1 + i : 1000000;
-			   				if(!libraries[0]) {
-			   					id = 1000000 + i;
-			   				}
-			   				var docPath = '/docs/publick/' + avatarName + '.' + extName;
-
-							if(extName === 'psd') {
-								docPath = '/docs/publick/' + avatarName + '.png';
-							}
-							if(setDefaultImg(extName) !== '') {
-								docPath = setDefaultImg(extName);
-							}
-							// generatorQRCode('http://172.16.11.98:8181/detail/' + id, qrcodeDir + '/qrcode_' + avatarName + '.png', function(qrcodePath) {
-							// 	// fs.renameSync('/docs/qrcode/qrcode_' + avatarName + '.png', qrcodePath);
-							// 	var item = {
-							// 		id: id,
-							// 		docPath: docPath,
-							// 		download: '/docs/publick/' + avatarName + '.' + extName,
-							// 		director_id: fields.director_id,
-							// 		name: name,
-							// 		qrcodePath: '/docs/qrcode/qrcode_' + avatarName + '.png'
-							// 	}
-
-							// 	db.insert(dbName, item);
-							// 	if(i === docLength - 1) {
-							// 		res.redirect('/doc-list/' + fields.director_id);
-							// 	}
-							// })
-							var item = {
-									id: id,
-									docPath: docPath,
-									download: '/docs/publick/' + avatarName + '.' + extName,
-									director_id: fields.director_id,
-									name: name
+								if(extName === 'psd') {
+									docPath = '/docs/publick/' + avatarName + '.png';
 								}
-
-								db.insert(dbName, item);
-								if(i === docLength - 1) {
-									res.redirect('/doc-list/' + fields.director_id);
+								if(setDefaultImg(extName) !== '') {
+									docPath = setDefaultImg(extName);
 								}
-			   			})
-			   		})(name, i, extName);
-			})(i)
-		}
-	});
+								// generatorQRCode('http://172.16.11.98:8181/detail/' + id, qrcodeDir + '/qrcode_' + avatarName + '.png', function(qrcodePath) {
+								// 	// fs.renameSync('/docs/qrcode/qrcode_' + avatarName + '.png', qrcodePath);
+								// 	var item = {
+								// 		id: id,
+								// 		docPath: docPath,
+								// 		download: '/docs/publick/' + avatarName + '.' + extName,
+								// 		director_id: fields.director_id,
+								// 		name: name,
+								// 		qrcodePath: '/docs/qrcode/qrcode_' + avatarName + '.png'
+								// 	}
+
+								// 	db.insert(dbName, item);
+								// 	if(i === docLength - 1) {
+								// 		res.redirect('/doc-list/' + fields.director_id);
+								// 	}
+								// })
+								var item = {
+										id: id,
+										docPath: docPath,
+										download: '/docs/publick/' + avatarName + '.' + extName,
+										director_id: fields.director_id,
+										name: name
+									}
+
+									db.insert(dbName, item);
+									if(i === docLength - 1) {
+										resolve(fields.director_id);
+									}
+				   			})
+				   		})(name, i, extName);
+				})(i)
+			}
+		});
+	})
+	
 
 }
 

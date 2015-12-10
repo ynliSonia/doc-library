@@ -331,3 +331,75 @@ I am listening the port of 8181
 [32m[2015-12-08 18:35:27.399] [INFO] db - [39m数据库连接成功
 [36m[2015-12-08 18:35:27.399] [DEBUG] db - [39musers 已经初始化
 I am listening the port of 8181
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node app.js`[39m
+[32m[2015-12-09 16:05:54.687] [INFO] db - [39m连接数据库 library
+[32m[2015-12-09 16:05:54.773] [INFO] db - [39m数据库连接成功
+[36m[2015-12-09 16:05:54.773] [DEBUG] db - [39musers 已经初始化
+I am listening the port of 8181
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node app.js`[39m
+[32m[2015-12-09 16:06:39.797] [INFO] db - [39m连接数据库 library
+[32m[2015-12-09 16:06:39.857] [INFO] db - [39m数据库连接成功
+[36m[2015-12-09 16:06:39.857] [DEBUG] db - [39musers 已经初始化
+I am listening the port of 8181
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node app.js`[39m
+[32m[2015-12-09 16:08:04.944] [INFO] db - [39m连接数据库 library
+[32m[2015-12-09 16:08:04.986] [INFO] db - [39m数据库连接成功
+[36m[2015-12-09 16:08:04.986] [DEBUG] db - [39musers 已经初始化
+I am listening the port of 8181
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node app.js`[39m
+[32m[2015-12-09 16:08:21.746] [INFO] db - [39m连接数据库 library
+[32m[2015-12-09 16:08:21.815] [INFO] db - [39m数据库连接成功
+[36m[2015-12-09 16:08:21.815] [DEBUG] db - [39musers 已经初始化
+I am listening the port of 8181
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node app.js`[39m
+[32m[2015-12-09 16:31:39.808] [INFO] db - [39m连接数据库 library
+[32m[2015-12-09 16:31:39.857] [INFO] db - [39m数据库连接成功
+[36m[2015-12-09 16:31:39.857] [DEBUG] db - [39musers 已经初始化
+I am listening the port of 8181
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node app.js`[39m
+[32m[2015-12-09 16:32:45.980] [INFO] db - [39m连接数据库 library
+[32m[2015-12-09 16:32:46.018] [INFO] db - [39m数据库连接成功
+[36m[2015-12-09 16:32:46.018] [DEBUG] db - [39musers 已经初始化
+I am listening the port of 8181
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node app.js`[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node app.js`[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node app.js`[39m
+[32m[2015-12-09 16:32:48.586] [INFO] db - [39m连接数据库 library
+[32m[2015-12-09 16:32:48.631] [INFO] db - [39m数据库连接成功
+[36m[2015-12-09 16:32:48.631] [DEBUG] db - [39musers 已经初始化
+I am listening the port of 8181
+[32m[2015-12-10 17:10:19.223] [INFO] db - [39m连接数据库 library
+[32m[2015-12-10 17:10:19.269] [INFO] db - [39m数据库连接成功
+[36m[2015-12-10 17:10:19.269] [DEBUG] db - [39musers 已经初始化
+events.js:141
+      throw er; // Unhandled 'error' event
+      ^
+
+Error: listen EADDRINUSE :::8181
+  at Object.exports._errnoException (util.js:837:11)
+  at exports._exceptionWithHostPort (util.js:860:20)
+  at Server._listen2 (net.js:1231:14)
+  at listen (net.js:1267:10)
+  at Server.listen (net.js:1357:5)
+  at EventEmitter.listen (/Users/mango/web/app/psd-to-img/node_modules/express/lib/application.js:617:24)
+  at /Users/mango/web/app/psd-to-img/app.js:32:19
+  at /Users/mango/web/app/psd-to-img/db.js:25:5
+  at tryCatcher (/Users/mango/web/app/psd-to-img/node_modules/bluebird/js/release/util.js:11:23)
+  at Promise._settlePromiseFromHandler (/Users/mango/web/app/psd-to-img/node_modules/bluebird/js/release/promise.js:489:31)
+  at Promise._settlePromise (/Users/mango/web/app/psd-to-img/node_modules/bluebird/js/release/promise.js:546:18)
+  at Promise._settlePromise0 (/Users/mango/web/app/psd-to-img/node_modules/bluebird/js/release/promise.js:591:10)
+  at Promise._settlePromises (/Users/mango/web/app/psd-to-img/node_modules/bluebird/js/release/promise.js:674:18)
+  at Async._drainQueue (/Users/mango/web/app/psd-to-img/node_modules/bluebird/js/release/async.js:129:16)
+  at Async._drainQueues (/Users/mango/web/app/psd-to-img/node_modules/bluebird/js/release/async.js:139:10)
+  at Immediate.Async.drainQueues [as _onImmediate] (/Users/mango/web/app/psd-to-img/node_modules/bluebird/js/release/async.js:16:14)
+  at processImmediate [as _immediateCallback] (timers.js:371:17)
+

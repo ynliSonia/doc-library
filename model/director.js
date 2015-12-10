@@ -4,6 +4,7 @@ var path = require('path');
 var formidable = require('formidable');
 var PSD = require('psd');
 var PdfImage = require('pdf-image');
+var Promise = require('bluebird');
 
 var dataPath = path.resolve(__dirname, '../DB/task.json');
 var groupPath = path.resolve(__dirname, '../DB/group.json');
@@ -27,7 +28,7 @@ exports.find = function(query) {
 
 // 增加新的文件夹
 // 文件夹的 id 从 10万起
-exports.add = function(req, res) {
+exports.add = function(req) {
 
 	db = helper.db;
 	// var taskObj = fs.readFileSync(dataPath, 'utf-8');
@@ -37,80 +38,86 @@ exports.add = function(req, res) {
 	form.uploadDir = path.resolve(__dirname, '../DB/publick/');	// 设置文件的保存地址
 	form.keepExtensions = true;  //  保留后缀
 	form.maxFieldsSize = 2 * 1024 * 1024;   // 最大的文件大小
+	return new Promise(function(resolve, reject) {
+		form.parse(req, function(err, fields, files) {
 
-	form.parse(req, function(err, fields, files) {
+			if(err) {
+				reject({status: -1, text: '系统出错啦~'})
+				return false;
+			}
 
-		if(err) {
-			console.log(err);
-			return false;
-		}
+			// 根据类型确定文件的后缀名
+			var extName = '';  //后缀名
+		    switch (files.cover_img.type) {
+		      case 'image/pjpeg':
+		        extName = 'jpg';
+		        break;
+		      case 'image/jpeg':
+		        extName = 'jpg';
+		        break;
+		      case 'image/png':
+		        extName = 'png';
+		        break;
+		      case 'image/x-png':
+		        extName = 'png';
+		        break;
+		      case 'image/vnd.adobe.photoshop':
+		       	extName = 'psd';
+		       	break;
+		      case 'image/gif':
+		      	extName='gif';
+		      	break;
+		    }
 
-		// 根据类型确定文件的后缀名
-		var extName = '';  //后缀名
-	    switch (files.cover_img.type) {
-	      case 'image/pjpeg':
-	        extName = 'jpg';
-	        break;
-	      case 'image/jpeg':
-	        extName = 'jpg';
-	        break;
-	      case 'image/png':
-	        extName = 'png';
-	        break;
-	      case 'image/x-png':
-	        extName = 'png';
-	        break;
-	      case 'image/vnd.adobe.photoshop':
-	       	extName = 'psd';
-	       	break;
-	      case 'image/gif':
-	      	extName='gif';
-	      	break;
-	    }
+		    // 判断后缀名是否正确， 如果不正确则不写入数据库
+		    if(extName === '') {
+		    	reject({status: -2, text: '暂时不支持该类型文件的上传'});
+		    	return ;
+		    }
+		    var avatarName = new Date().getTime();
 
-	    // 判断后缀名是否正确， 如果不正确则不写入数据库
-	    if(extName === '') return false;
-	    var avatarName = new Date().getTime();
+	    	var newPath = form.uploadDir + '/' + avatarName + '.' + extName;
+	    	var pngPath = form.uploadDir + '/' + avatarName + '.' + 'png';
 
-    	var newPath = form.uploadDir + '/' + avatarName + '.' + extName;
-    	var pngPath = form.uploadDir + '/' + avatarName + '.' + 'png';
+	    	// 把源文件传入
+	    	fs.renameSync(files.cover_img.path, newPath);
 
-    	// 把源文件传入
-    	fs.renameSync(files.cover_img.path, newPath);
+	    	// 把 PSD文件转为 png 存储，方便查看
 
-    	// 把 PSD文件转为 png 存储，方便查看
+	    	if(extName === 'psd'){
+		    	psdToPng(newPath, pngPath);
+	   		}
 
-    	if(extName === 'psd'){
-	    	psdToPng(newPath, pngPath);
-   		}
+	   		self.find({})
+	   			.then(function(directors) {
+	   				directors.sort(function(a, b) {
+	   					return a.id < b.id ? 1 : -1;
+	   				});
+	   				var id = directors[0] ? directors[0].id + 1 : 100000;
+	   				var times = new Date();
+	   				var docPath = '/docs/publick/' + avatarName + '.' + extName;
 
-   		self.find({})
-   			.then(function(directors) {
-   				directors.sort(function(a, b) {
-   					return a.id < b.id ? 1 : -1;
-   				});
-   				var id = directors[0] ? directors[0].id + 1 : 100000;
-   				var times = new Date();
-   				var docPath = '/docs/publick/' + avatarName + '.' + extName;
+					if(extName === 'psd' || extName === 'pdf') {
+						docPath = '/docs/publick/' + avatarName + '.png';
+					}
 
-				if(extName === 'psd' || extName === 'pdf') {
-					docPath = '/docs/publick/' + avatarName + '.png';
-				}
+					var item = {
+						id: id,
+						times: times,
+						name: fields.name,
+						desc: fields.desc,
+						cover_img: docPath,
+						author_id: fields.author_id
+					}
 
-				var item = {
-					id: id,
-					times: times,
-					name: fields.name,
-					desc: fields.desc,
-					cover_img: docPath,
-					author_id: fields.author_id
-				}
-
-				db.insert(dbName, item);
-				// return true;
-				res.redirect('/list/' + fields.author_id);
-   			})
-	});
+					db.insert(dbName, item);
+					// return true;
+					resolve(fields.author_id)
+					// res.redirect('/list/' + fields.author_id);
+	   			})
+		});
+	})
+	
 
 }
 
