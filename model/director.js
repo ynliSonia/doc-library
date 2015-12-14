@@ -8,7 +8,7 @@ var Promise = require('bluebird');
 
 var dataPath = path.resolve(__dirname, '../DB/task.json');
 var groupPath = path.resolve(__dirname, '../DB/group.json');
-var publick = path.resolve(__dirname, '../DB/publick/');
+var publick = path.resolve(__dirname, '../DB/directors/');
 
 var helper = require('../helper');
 var db = helper.db;
@@ -35,7 +35,7 @@ exports.add = function(req) {
 	var self = this;
 	var form = new formidable.IncomingForm();
 	form.encoding = 'utf-8';   // 设置编码
-	form.uploadDir = path.resolve(__dirname, '../DB/publick/');	// 设置文件的保存地址
+	form.uploadDir = path.resolve(__dirname, '../DB/directors/');	// 设置文件的保存地址
 	form.keepExtensions = true;  //  保留后缀
 	form.maxFieldsSize = 2 * 1024 * 1024;   // 最大的文件大小
 	return new Promise(function(resolve, reject) {
@@ -95,10 +95,10 @@ exports.add = function(req) {
 	   				});
 	   				var id = directors[0] ? directors[0].id + 1 : 100000;
 	   				var times = new Date();
-	   				var docPath = '/docs/publick/' + avatarName + '.' + extName;
+	   				var docPath = '/docs/directors/' + avatarName + '.' + extName;
 
 					if(extName === 'psd' || extName === 'pdf') {
-						docPath = '/docs/publick/' + avatarName + '.png';
+						docPath = '/docs/directors/' + avatarName + '.png';
 					}
 
 					var item = {

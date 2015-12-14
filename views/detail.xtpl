@@ -8,7 +8,9 @@
     </head>
     <body>
         <div class="library-detail">
-			<img src="{{docPath}}" />
+            {{#each(list)}}
+			<img src="{{this}}" />
+            {{/each}}
 		</div>
     </body>
     <script src="/assets/build/lib/jquery.min.js"></script>

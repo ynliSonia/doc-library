@@ -31,29 +31,56 @@
 		}
 	}
 	.doc-list {
+		// width: 1080px;
 		margin-top: 20px;
 	}
 	.doc-item {
-		width: 280px;
+		width: 240px;
 		padding: 15px 10px;
-		margin-right: 15px;
+		margin: 0 20px 15px 0;
 		float: left;
 		transition: all 0.7s;
 		border-bottom: 1px solid #DDE1EA;
+		background-color: #fff;
 		&:hover {
 			border-bottom-color: #eff3f5;
 			background-color: #fff;
 			box-shadow: 1px 1px 1px 1px #ddd;
+			.box .cover {
+				display: none;
+			}
 		}
-		.preview {
-			width: 260px;
-			height: 300px;
+		.box {
+			width: 222px;
+			height: 242px;
 			margin: 0 auto;
-			display: block;
 			overflow: hidden;
-			border: 1px solid #ddd;
-			img {
-				width: 260px;
+			position: relative;
+			.cover {
+				width: 222px;
+				height: 242px;
+				position: absolute;
+				top: 0;
+				left: 0;
+				transition: all 0.4s;
+				overflow: hidden;
+				background-color: rgba(0, 0, 0, 0.45);
+				font-size: 50px;
+				color: #a9b7b7;
+				text-align: center;
+				line-height: 242px;
+			}
+			.preview {
+				width: 220px;
+				height: 240px;
+				margin: 0 auto;
+				display: table-cell;
+				vertical-align: middle;
+				overflow: hidden;
+				border: 1px solid #ddd;
+				img {
+					width: 220px;
+				}
 			}
 		}
 		.name {

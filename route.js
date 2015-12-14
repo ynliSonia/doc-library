@@ -2,6 +2,8 @@
 var express = require('express');
 var router = express.Router();
 var task = require('./controller/task');
+var detail = require('./controller/detail');
+
 
 // 首页
 router.get('/', task.index);
@@ -32,6 +34,10 @@ router.post('/addItem', task.addDoc);
 router.delete('/del/:id', task.del);
 
 // 详情预览页
-router.get('/detail/:id', task.detail);
+router.get('/detail/:id', detail.review);
+
+
+// 关于页面
+router.get('/about', task.about);
 
 module.exports = router;

@@ -10,9 +10,12 @@
 			<ul class="doc-list">
 				{{#each(list)}}
 				<li class="doc-item">
-					<a href="/doc-list/{{this.id}}" class="preview">
-						<img src="{{this.cover_img}}" />
-					</a>
+					<div class="box">
+						<div class="cover ps-icon-font">&#xe605;</div>
+						<a href="/doc-list/{{this.id}}" class="preview">
+							<img src="{{this.cover_img}}" style="vertical-align:middle;" />
+						</a>
+					</div>
 					<div class="infos">
 						<p class="name"><a href="/">{{this.name}}</a></p>
 						<p class="doc-desc">{{this.desc}} {{this.times}}</p>

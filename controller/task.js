@@ -120,8 +120,14 @@ exports.detail = function(req, res, next) {
 	Library.find({id: docId})
 		   .then(function(detail) {
 
-		   	// console.log(detail.docPath);
 		   	var docPath = detail ? detail[0].docPath : '';
 		   	res.render('detail', {title: '详情', pageName: 'detail', docPath: docPath});
 		   })
+}
+
+
+
+// 关于页面
+exports.about = function(req, res, next) {
+	res.render('about', {title: '关于', pageName: 'about'});
 }

@@ -16,6 +16,6 @@ List.prototype = {
 	bindEvents: function() {
 		$('.J_add_doc').on('click', function() {
 			
-		})
+		});
 	}
 }
