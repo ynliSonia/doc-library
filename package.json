@@ -38,6 +38,8 @@
     "lodash": "^3.10.1",
     "log4js": "^0.6.29",
     "reactify": "~1.1.1",
+    "unoconv": "^0.1.2",
+    "unoconv2": "^1.0.0",
     "vinyl-buffer": "~1.0.0",
     "vinyl-source-stream": "~1.1.0",
     "webpack": "^1.12.9"

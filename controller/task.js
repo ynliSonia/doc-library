@@ -121,8 +121,10 @@ exports.detail = function(req, res, next) {
 		   .then(function(detail) {
 
 		   	var docPath = detail ? detail[0].docPath : '';
+		   	var docPaths = [];
+		   	docPaths.push(docPath);
 		   	res.render('detail', {title: '详情', pageName: 'detail', docPath: docPath});
-		   })
+		})
 }
 
 
