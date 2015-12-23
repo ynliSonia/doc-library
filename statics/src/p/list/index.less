@@ -14,6 +14,8 @@
 		width: 120px;
 		height: 40px;
 		display: block;
+		float: left;
+		margin-right: 20px;
 		border: 1px solid #bdc3c7;
 		border-radius: 20px;
 		transition: all 0.2s ease-in-out;
@@ -29,29 +31,56 @@
 		}
 	}
 	.doc-list {
+		// width: 1080px;
 		margin-top: 20px;
 	}
 	.doc-item {
-		width: 290px;
-		padding: 15px 15px;
-		margin-right: 15px;
+		width: 240px;
+		padding: 15px 10px;
+		margin: 0 20px 15px 0;
 		float: left;
 		transition: all 0.7s;
 		border-bottom: 1px solid #DDE1EA;
+		background-color: #fff;
 		&:hover {
 			border-bottom-color: #eff3f5;
 			background-color: #fff;
 			box-shadow: 1px 1px 1px 1px #ddd;
+			.box .cover {
+				display: none;
+			}
 		}
-		.preview {
-			width: 260px;
-			height: 300px;
+		.box {
+			width: 222px;
+			height: 242px;
 			margin: 0 auto;
-			display: block;
 			overflow: hidden;
-			border: 1px solid #ddd;
-			img {
-				width: 260px;
+			position: relative;
+			.cover {
+				width: 222px;
+				height: 242px;
+				position: absolute;
+				top: 0;
+				left: 0;
+				transition: all 0.4s;
+				overflow: hidden;
+				background-color: rgba(0, 0, 0, 0.45);
+				font-size: 50px;
+				color: #a9b7b7;
+				text-align: center;
+				line-height: 242px;
+			}
+			.preview {
+				width: 220px;
+				height: 240px;
+				margin: 0 auto;
+				display: table-cell;
+				vertical-align: middle;
+				overflow: hidden;
+				border: 1px solid #ddd;
+				img {
+					width: 220px;
+				}
 			}
 		}
 		.name {
@@ -62,6 +91,9 @@
 			font-weight: bold;
 		}
 		.doc-desc {
+			width: 200px;
+			height: 20px;
+			overflow: hidden;
 			font-size: 12px;
 		}
 		.time-show {
@@ -69,8 +101,26 @@
 			line-height: 24px;
 			font-size: 14px;
 			color: #34495e;
+			img {
+				display: inline-block;
+				border-radius: 50%;
+			}
+			.icons {
+				width: 100px;
+				height: 30px;
+				float: right;
+				// border: 0;
+				font-size: 18px;
+				a {
+					margin-right: 3px;
+					color: #666;
+				}
+			}
 		}
 		.author {
+			width: 100px;
+			overflow: hidden;
+			margin-left: 5px;
 			font-size: 16px;
 			color: #34495e;
 		}

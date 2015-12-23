@@ -3,20 +3,22 @@
 {{#block ("body")}}
 
 	<div class="main-content">
-
-		<a href="/new/{{id}}" class="add-btn">新建文档</a>
-
+		<p class="clearfix">
+			<a href="/new-director/{{id}}" class="add-btn">新建文件夹</a>
+		</p>
 		<div class="dl-docs">
 			<ul class="doc-list">
 				{{#each(list)}}
 				<li class="doc-item">
-					<a href="./" class="preview">
-						<img src="{{this.docPath}}" />
-					</a>
+					<div class="box">
+						<div class="cover ps-icon-font">&#xe605;</div>
+						<a href="/doc-list/{{this.id}}" class="preview">
+							<img src="{{this.cover_img}}" style="vertical-align:middle;" />
+						</a>
+					</div>
 					<div class="infos">
-						<p class="name"><a href="./">{{this.name}}</a></p>
-						<p class="doc-desc">{{this.desc}}</p>
-						<p class="time-show"> <a class="author" href="./">{{this.author}}</a> {{this.times}}</p>
+						<p class="name"><a href="/">{{this.name}}</a></p>
+						<p class="doc-desc">{{this.desc}} {{this.times}}</p>
 					</div>
 				</li>
 				{{/each}}

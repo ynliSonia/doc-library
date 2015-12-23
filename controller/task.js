@@ -1,48 +1,24 @@
 
 var task = require('../model/task');
-
-// 首页展示To Do List的列表
-exports.list = function(req, res, next) {
-
-	var groupId = parseInt(req.params.id);
-	var listObj = task.readList();
-	var list = [];
-	if(listObj) {
-		list = JSON.parse(listObj).list;
-	}
-
-	var result = [];
-	var len = list.length;
-
-	for(var i = 0; i < len; i++) {
-		if(list[i].author_id == groupId) {
-			result.push(list[i]);
-		}
-	}
-	res.render('list', {title: '首页', pageName: 'list', list: result, id: groupId});
-}
+var Group = require('../model/group');
+var Library = require('../model/library');
+var Director = require('../model/director');
 
 // 首页
 exports.index = function(req, res, next) {
 
-	// 文件读取
-	var objs = task.readGroups();
+	var groups = Group.find({});
 
-	// 判断是否有数据，没有则写入默认数据
-	if(objs) {
-		var list = JSON.parse(objs).groups;
-		res.render('index', {title: '首页', list: list, pageName: 'home'}); 
-		return;
-	}
-
-	var defaulList = [
-		{
-			name: '名称',
-			photo: '',
-			id: -1
-		}
-	]
-	res.render('index', {title: '首页', pageName: 'home', list: defaulList});
+	Group.find({})
+		 .then(function(groups) {
+		 	var len = groups.length;
+		 	var timeObj;
+		 	for(var i = 0;i< len; i++) {
+		 		timeObj = new Date(groups[i].times);
+		 		groups[i].times = timeObj.getFullYear() + '-' + (timeObj.getMonth()+1) + '-' + timeObj.getDate();
+		 	}
+		   	res.render('index', {title: '首页', pageName: 'home', list: groups});
+		})
 }
 
 // 新增分组页面
@@ -50,24 +26,76 @@ exports.newGroup = function(req, res, next) {
 	res.render('add-group', {title: '新建分组', pageName: 'add-doc'});
 }
 
+
+// 新增分组接口
 exports.addGroup = function(req, res, next) {
-	task.addGroup(req);
-	res.redirect('/');
+	Group.add(req)
+		.then(function() {
+			res.redirect('/');
+		}, function(status, text) {
+			res.json({success: false, status: status, text: text});
+		});
 }
 
-// 新增页面
+// 文件夹列表页面
+exports.list = function(req, res, next) {
+
+	var groupId = req.params.id;
+	Director.find({author_id: groupId})
+			.then(function(directors) {
+				var len = directors.length;
+			 	var libObj;
+			 	for(var i = 0;i< len; i++) {
+			 		libObj = new Date(directors[i].times);
+			 		directors[i].times = libObj.getFullYear() + '-' + (libObj.getMonth()+1) + '-' + libObj.getDate();
+			 	}
+				res.render('list', {title: '首页', pageName: 'list', list: directors, id: groupId});
+			})
+}
+
+// 新建文件夹
+exports.newDirector = function(req, res, next) {
+	res.render('new-director', {title: '新增', pageName: 'add-doc', id: req.params.id})
+}
+// 新增文件夹接口
+exports.addDirector = function(req, res, next) {
+	Director.add(req)
+		.then(function(id) {
+			res.redirect('/list/' + id);
+
+		}, function(obj) {
+			res.json({success: false, status: obj.status, text: obj.text});
+		});
+}
+
+// 文档列表
+exports.docList = function(req, res, next) {
+
+	var director_id = req.params.id;
+	Library.find({director_id: director_id})
+		   .then(function(libraries) {
+		   		res.render('doc-list', {title: '文档列表', pageName: 'doc-list', list: libraries, id: req.params.id})
+		   })
+}
+
+// 新增文档页面
 exports.new = function(req, res, next) {
 
 	res.render('add', {title: '新增', pageName: 'add-doc', id: req.params.id});
 }
 
 
-// 新增
-exports.add = function(req, res, next) {
+// 新增文档接口
+exports.addDoc = function(req, res, next) {
 
-	var item = req.body;
-
-	task.addItem(req, res);
+	// task.addItem(req, res);
+	Library.add(req)
+		.then(function(id) {
+			res.redirect('/doc-list/' + id);
+	}, function(text) {
+		console.log(text);
+		res.json({status: 0, text: 'text'});
+	});
 }
 
 // 删除
@@ -84,9 +112,22 @@ exports.del = function(req, res, next) {
 
 }
 
-// 添加 psd
-exports.addPsd = function(req, res, next) {
-	var formData = req.body;
-	task.addPsd(formData);
-	res.redirect('/');
+// 详情预览
+exports.detail = function(req, res, next) {
+
+	var docId = parseInt(req.params.id);
+
+	Library.find({id: docId})
+		   .then(function(detail) {
+
+		   	var docPath = detail ? detail[0].docPath : '';
+		   	res.render('detail', {title: '详情', pageName: 'detail', docPath: docPath});
+		   })
+}
+
+
+
+// 关于页面
+exports.about = function(req, res, next) {
+	res.render('about', {title: '关于', pageName: 'about'});
 }

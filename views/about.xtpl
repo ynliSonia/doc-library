@@ -1,0 +1,8 @@
+{{ extend ("./layout") }}
+
+{{#block ("body")}}
+	<div class="lib-about">
+		待完善
+	</div>
+
+{{/block}}

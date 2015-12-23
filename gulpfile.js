@@ -5,7 +5,7 @@
 
 var path = require('path');
 var fs = require('fs');
-var connect = require('gulp-connect');
+
 
 var gulp = require('gulp');
 var babel = require('gulp-babel');

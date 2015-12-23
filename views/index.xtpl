@@ -17,7 +17,7 @@
 						<img src="{{this.photo}}" />
 					</a>
 					<div class="infos">
-						<p class="name"><a href="./">{{this.name}}</a></p>
+						<p class="name"><a href="./">{{this.name}}</a><a href="/edit-group/{{this.id}}" class="edit-icon ps-icon-font">&#xe606;</a></p>
 						<p class="doc-desc">{{this.identity}}</p>
 						<p class="time-show"> {{this.times}}</p>
 					</div>

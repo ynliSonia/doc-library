@@ -1,0 +1,32 @@
+{{ extend ("./layout") }}
+
+{{#block ("body")}}
+
+    <div class="add-doc">
+        <form action="/editTheGroup" method="post" enctype="multipart/form-data"  class="form-horizontal">
+            <div class="form-group">
+                <label for="J_name" class="col-sm-2 control-label">名称</label>
+                <div class="col-xs-3">
+                  <input type=" text" class="form-control" id="J_name" name="name" placeholder="请填写姓名或微信名" value={{name}}>
+                </div>
+            </div>
+             <div class="form-group">
+                <label for="J_identity" class="col-sm-2 control-label">职位</label>
+                <div class="col-xs-3">
+                  <input type="text" class="form-control" id="J_identity" name="identity" placeholder="如：产品经理" value={{identity}}>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="J_photo" class="col-sm-2 control-label">上传头像</label>
+                <div class="col-xs-3">
+                    <input type="file" class="form-control" name="photo" id="J_photo" />
+                </div>
+            </div>
+	<input type="hidden" value={{id}} name="groupId" />
+            <div class="btn-box">
+                <input type="submit" id="J_btn" value="添加" class="btn btn-default" />
+            </div>
+
+        </form>
+    </div>
+{{/block}}

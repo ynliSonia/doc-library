@@ -1,0 +1,708 @@
+[32m[2015-12-07 17:14:09.432] [INFO] db - [39m连接数据库 library
+[32m[2015-12-07 17:14:09.475] [INFO] db - [39m数据库连接成功
+[36m[2015-12-07 17:14:09.476] [DEBUG] db - [39musers 已经初始化
+I am listening the port of 8181
+[33m[nodemon] 1.8.1[39m
+[33m[nodemon] to restart at any time, enter `rs`[39m
+[33m[nodemon] watching: *.*[39m
+[32m[nodemon] starting `node app.js`[39m
+[32m[2015-12-08 16:46:15.146] [INFO] db - [39m连接数据库 library
+[32m[2015-12-08 16:46:15.197] [INFO] db - [39m数据库连接成功
+[36m[2015-12-08 16:46:15.197] [DEBUG] db - [39musers 已经初始化
+I am listening the port of 8181
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node app.js`[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node app.js`[39m
+[32m[2015-12-08 18:07:33.244] [INFO] db - [39m连接数据库 library
+[32m[2015-12-08 18:07:33.285] [INFO] db - [39m数据库连接成功
+[36m[2015-12-08 18:07:33.285] [DEBUG] db - [39musers 已经初始化
+I am listening the port of 8181
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node app.js`[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node app.js`[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node app.js`[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node app.js`[39m
+[32m[2015-12-08 18:07:37.246] [INFO] db - [39m连接数据库 library
+[32m[2015-12-08 18:07:37.303] [INFO] db - [39m数据库连接成功
+[36m[2015-12-08 18:07:37.304] [DEBUG] db - [39musers 已经初始化
+I am listening the port of 8181
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node app.js`[39m
+[32m[2015-12-08 18:12:33.571] [INFO] db - [39m连接数据库 library
+[32m[2015-12-08 18:12:33.610] [INFO] db - [39m数据库连接成功
+[36m[2015-12-08 18:12:33.611] [DEBUG] db - [39musers 已经初始化
+I am listening the port of 8181
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node app.js`[39m
+[32m[2015-12-08 18:17:37.247] [INFO] db - [39m连接数据库 library
+[32m[2015-12-08 18:17:37.288] [INFO] db - [39m数据库连接成功
+[36m[2015-12-08 18:17:37.288] [DEBUG] db - [39musers 已经初始化
+I am listening the port of 8181
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node app.js`[39m
+[32m[2015-12-08 18:17:48.617] [INFO] db - [39m连接数据库 library
+[32m[2015-12-08 18:17:48.667] [INFO] db - [39m数据库连接成功
+[36m[2015-12-08 18:17:48.668] [DEBUG] db - [39musers 已经初始化
+I am listening the port of 8181
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node app.js`[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node app.js`[39m
+[32m[2015-12-08 18:18:50.796] [INFO] db - [39m连接数据库 library
+[32m[2015-12-08 18:18:50.843] [INFO] db - [39m数据库连接成功
+[36m[2015-12-08 18:18:50.844] [DEBUG] db - [39musers 已经初始化
+I am listening the port of 8181
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node app.js`[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node app.js`[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node app.js`[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node app.js`[39m
+[32m[2015-12-08 18:18:54.989] [INFO] db - [39m连接数据库 library
+[32m[2015-12-08 18:18:55.028] [INFO] db - [39m数据库连接成功
+[36m[2015-12-08 18:18:55.028] [DEBUG] db - [39musers 已经初始化
+I am listening the port of 8181
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node app.js`[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node app.js`[39m
+[32m[2015-12-08 18:19:01.676] [INFO] db - [39m连接数据库 library
+[32m[2015-12-08 18:19:01.767] [INFO] db - [39m数据库连接成功
+[36m[2015-12-08 18:19:01.769] [DEBUG] db - [39musers 已经初始化
+I am listening the port of 8181
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node app.js`[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node app.js`[39m
+[32m[2015-12-08 18:19:14.912] [INFO] db - [39m连接数据库 library
+[32m[2015-12-08 18:19:14.956] [INFO] db - [39m数据库连接成功
+[36m[2015-12-08 18:19:14.956] [DEBUG] db - [39musers 已经初始化
+I am listening the port of 8181
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node app.js`[39m
+[32m[2015-12-08 18:20:37.562] [INFO] db - [39m连接数据库 library
+[32m[2015-12-08 18:20:37.609] [INFO] db - [39m数据库连接成功
+[36m[2015-12-08 18:20:37.609] [DEBUG] db - [39musers 已经初始化
+I am listening the port of 8181
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node app.js`[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node app.js`[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node app.js`[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node app.js`[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node app.js`[39m
+[32m[2015-12-08 18:21:01.600] [INFO] db - [39m连接数据库 library
+[32m[2015-12-08 18:21:01.682] [INFO] db - [39m数据库连接成功
+[36m[2015-12-08 18:21:01.683] [DEBUG] db - [39musers 已经初始化
+I am listening the port of 8181
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node app.js`[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node app.js`[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node app.js`[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node app.js`[39m
+[32m[2015-12-08 18:22:11.674] [INFO] db - [39m连接数据库 library
+[32m[2015-12-08 18:22:11.726] [INFO] db - [39m数据库连接成功
+[36m[2015-12-08 18:22:11.726] [DEBUG] db - [39musers 已经初始化
+I am listening the port of 8181
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node app.js`[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node app.js`[39m
+[32m[2015-12-08 18:22:18.795] [INFO] db - [39m连接数据库 library
+[32m[2015-12-08 18:22:18.836] [INFO] db - [39m数据库连接成功
+[36m[2015-12-08 18:22:18.836] [DEBUG] db - [39musers 已经初始化
+I am listening the port of 8181
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node app.js`[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node app.js`[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node app.js`[39m
+[32m[2015-12-08 18:22:47.312] [INFO] db - [39m连接数据库 library
+[32m[2015-12-08 18:22:47.354] [INFO] db - [39m数据库连接成功
+[36m[2015-12-08 18:22:47.354] [DEBUG] db - [39musers 已经初始化
+I am listening the port of 8181
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node app.js`[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node app.js`[39m
+[32m[2015-12-08 18:23:15.500] [INFO] db - [39m连接数据库 library
+[32m[2015-12-08 18:23:15.548] [INFO] db - [39m数据库连接成功
+[36m[2015-12-08 18:23:15.548] [DEBUG] db - [39musers 已经初始化
+I am listening the port of 8181
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node app.js`[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node app.js`[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node app.js`[39m
+[32m[2015-12-08 18:23:36.842] [INFO] db - [39m连接数据库 library
+[32m[2015-12-08 18:23:36.881] [INFO] db - [39m数据库连接成功
+[36m[2015-12-08 18:23:36.882] [DEBUG] db - [39musers 已经初始化
+I am listening the port of 8181
+[TypeError: new path must be a string]
+[TypeError: new path must be a string]
+[TypeError: new path must be a string]
+[TypeError: new path must be a string]
+[TypeError: new path must be a string]
+[TypeError: new path must be a string]
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node app.js`[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node app.js`[39m
+[32m[2015-12-08 18:24:06.430] [INFO] db - [39m连接数据库 library
+[32m[2015-12-08 18:24:06.477] [INFO] db - [39m数据库连接成功
+[36m[2015-12-08 18:24:06.477] [DEBUG] db - [39musers 已经初始化
+I am listening the port of 8181
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node app.js`[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node app.js`[39m
+[32m[2015-12-08 18:24:56.793] [INFO] db - [39m连接数据库 library
+[32m[2015-12-08 18:24:56.841] [INFO] db - [39m数据库连接成功
+[36m[2015-12-08 18:24:56.841] [DEBUG] db - [39musers 已经初始化
+I am listening the port of 8181
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node app.js`[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node app.js`[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node app.js`[39m
+[32m[2015-12-08 18:25:07.573] [INFO] db - [39m连接数据库 library
+[32m[2015-12-08 18:25:07.648] [INFO] db - [39m数据库连接成功
+[36m[2015-12-08 18:25:07.649] [DEBUG] db - [39musers 已经初始化
+I am listening the port of 8181
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node app.js`[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node app.js`[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node app.js`[39m
+[32m[2015-12-08 18:25:17.151] [INFO] db - [39m连接数据库 library
+[32m[2015-12-08 18:25:17.285] [INFO] db - [39m数据库连接成功
+[36m[2015-12-08 18:25:17.285] [DEBUG] db - [39musers 已经初始化
+I am listening the port of 8181
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node app.js`[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node app.js`[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node app.js`[39m
+[32m[2015-12-08 18:25:24.416] [INFO] db - [39m连接数据库 library
+[32m[2015-12-08 18:25:24.506] [INFO] db - [39m数据库连接成功
+[36m[2015-12-08 18:25:24.506] [DEBUG] db - [39musers 已经初始化
+I am listening the port of 8181
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node app.js`[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node app.js`[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node app.js`[39m
+[32m[2015-12-08 18:35:27.352] [INFO] db - [39m连接数据库 library
+[32m[2015-12-08 18:35:27.399] [INFO] db - [39m数据库连接成功
+[36m[2015-12-08 18:35:27.399] [DEBUG] db - [39musers 已经初始化
+I am listening the port of 8181
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node app.js`[39m
+[32m[2015-12-09 16:05:54.687] [INFO] db - [39m连接数据库 library
+[32m[2015-12-09 16:05:54.773] [INFO] db - [39m数据库连接成功
+[36m[2015-12-09 16:05:54.773] [DEBUG] db - [39musers 已经初始化
+I am listening the port of 8181
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node app.js`[39m
+[32m[2015-12-09 16:06:39.797] [INFO] db - [39m连接数据库 library
+[32m[2015-12-09 16:06:39.857] [INFO] db - [39m数据库连接成功
+[36m[2015-12-09 16:06:39.857] [DEBUG] db - [39musers 已经初始化
+I am listening the port of 8181
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node app.js`[39m
+[32m[2015-12-09 16:08:04.944] [INFO] db - [39m连接数据库 library
+[32m[2015-12-09 16:08:04.986] [INFO] db - [39m数据库连接成功
+[36m[2015-12-09 16:08:04.986] [DEBUG] db - [39musers 已经初始化
+I am listening the port of 8181
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node app.js`[39m
+[32m[2015-12-09 16:08:21.746] [INFO] db - [39m连接数据库 library
+[32m[2015-12-09 16:08:21.815] [INFO] db - [39m数据库连接成功
+[36m[2015-12-09 16:08:21.815] [DEBUG] db - [39musers 已经初始化
+I am listening the port of 8181
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node app.js`[39m
+[32m[2015-12-09 16:31:39.808] [INFO] db - [39m连接数据库 library
+[32m[2015-12-09 16:31:39.857] [INFO] db - [39m数据库连接成功
+[36m[2015-12-09 16:31:39.857] [DEBUG] db - [39musers 已经初始化
+I am listening the port of 8181
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node app.js`[39m
+[32m[2015-12-09 16:32:45.980] [INFO] db - [39m连接数据库 library
+[32m[2015-12-09 16:32:46.018] [INFO] db - [39m数据库连接成功
+[36m[2015-12-09 16:32:46.018] [DEBUG] db - [39musers 已经初始化
+I am listening the port of 8181
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node app.js`[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node app.js`[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node app.js`[39m
+[32m[2015-12-09 16:32:48.586] [INFO] db - [39m连接数据库 library
+[32m[2015-12-09 16:32:48.631] [INFO] db - [39m数据库连接成功
+[36m[2015-12-09 16:32:48.631] [DEBUG] db - [39musers 已经初始化
+I am listening the port of 8181
+[32m[2015-12-10 17:10:19.223] [INFO] db - [39m连接数据库 library
+[32m[2015-12-10 17:10:19.269] [INFO] db - [39m数据库连接成功
+[36m[2015-12-10 17:10:19.269] [DEBUG] db - [39musers 已经初始化
+events.js:141
+      throw er; // Unhandled 'error' event
+      ^
+
+Error: listen EADDRINUSE :::8181
+  at Object.exports._errnoException (util.js:837:11)
+  at exports._exceptionWithHostPort (util.js:860:20)
+  at Server._listen2 (net.js:1231:14)
+  at listen (net.js:1267:10)
+  at Server.listen (net.js:1357:5)
+  at EventEmitter.listen (/Users/mango/web/app/psd-to-img/node_modules/express/lib/application.js:617:24)
+  at /Users/mango/web/app/psd-to-img/app.js:32:19
+  at /Users/mango/web/app/psd-to-img/db.js:25:5
+  at tryCatcher (/Users/mango/web/app/psd-to-img/node_modules/bluebird/js/release/util.js:11:23)
+  at Promise._settlePromiseFromHandler (/Users/mango/web/app/psd-to-img/node_modules/bluebird/js/release/promise.js:489:31)
+  at Promise._settlePromise (/Users/mango/web/app/psd-to-img/node_modules/bluebird/js/release/promise.js:546:18)
+  at Promise._settlePromise0 (/Users/mango/web/app/psd-to-img/node_modules/bluebird/js/release/promise.js:591:10)
+  at Promise._settlePromises (/Users/mango/web/app/psd-to-img/node_modules/bluebird/js/release/promise.js:674:18)
+  at Async._drainQueue (/Users/mango/web/app/psd-to-img/node_modules/bluebird/js/release/async.js:129:16)
+  at Async._drainQueues (/Users/mango/web/app/psd-to-img/node_modules/bluebird/js/release/async.js:139:10)
+  at Immediate.Async.drainQueues [as _onImmediate] (/Users/mango/web/app/psd-to-img/node_modules/bluebird/js/release/async.js:16:14)
+  at processImmediate [as _immediateCallback] (timers.js:371:17)
+
+[16:13:12] Using gulpfile ~/web/app/psd-to-img/gulpfile.js
+[16:13:12] Starting 'watch'...
+[16:13:12] Finished 'watch' after 18 ms
+[16:16:40] Starting 'js'...
+[16:16:40] Finished 'js' after 4.44 ms
+[16:16:40] Starting 'less'...
+[16:16:40] Finished 'less' after 11 ms
+[16:16:40] Starting 'lib'...
+[16:16:40] Finished 'lib' after 4.42 ms
+[16:16:40] Starting 'default'...
+[16:16:40] Finished 'default' after 2.93 μs
+[16:17:10] Starting 'js'...
+[16:17:10] Finished 'js' after 1.41 ms
+[16:17:10] Starting 'less'...
+[16:17:10] Finished 'less' after 3.16 ms
+[16:17:10] Starting 'lib'...
+[16:17:10] Finished 'lib' after 1.67 ms
+[16:17:10] Starting 'default'...
+[16:17:10] Finished 'default' after 3.59 μs
+[16:17:54] Starting 'js'...
+[16:17:54] Finished 'js' after 1.08 ms
+[16:17:54] Starting 'less'...
+[16:17:54] Finished 'less' after 2.01 ms
+[16:17:54] Starting 'lib'...
+[16:17:54] Finished 'lib' after 1.52 ms
+[16:17:54] Starting 'default'...
+[16:17:54] Finished 'default' after 2.87 μs
+[16:17:55] Starting 'js'...
+[16:17:55] Finished 'js' after 405 μs
+[16:17:55] Starting 'less'...
+[16:17:55] Finished 'less' after 2.75 ms
+[16:17:55] Starting 'lib'...
+[16:17:55] Finished 'lib' after 2.61 ms
+[16:17:55] Starting 'default'...
+[16:17:55] Finished 'default' after 4.79 μs
+[16:17:58] Starting 'js'...
+[16:17:58] Finished 'js' after 529 μs
+[16:17:58] Starting 'less'...
+[16:17:58] Finished 'less' after 1.86 ms
+[16:17:58] Starting 'lib'...
+[16:17:58] Finished 'lib' after 1.67 ms
+[16:17:58] Starting 'default'...
+[16:17:58] Finished 'default' after 4.51 μs
+[16:17:59] Starting 'js'...
+[16:17:59] Finished 'js' after 503 μs
+[16:17:59] Starting 'less'...
+[16:17:59] Finished 'less' after 2.32 ms
+[16:17:59] Starting 'lib'...
+[16:17:59] Finished 'lib' after 4.47 ms
+[16:17:59] Starting 'default'...
+[16:17:59] Finished 'default' after 4.5 μs
+[16:18:32] Starting 'js'...
+[16:18:32] Finished 'js' after 381 μs
+[16:18:32] Starting 'less'...
+[16:18:32] Finished 'less' after 2.28 ms
+[16:18:32] Starting 'lib'...
+[16:18:32] Finished 'lib' after 1.21 ms
+[16:18:32] Starting 'default'...
+[16:18:32] Finished 'default' after 2.72 μs
+[16:20:04] Starting 'js'...
+[16:20:04] Finished 'js' after 520 μs
+[16:20:04] Starting 'less'...
+[16:20:04] Finished 'less' after 2.1 ms
+[16:20:04] Starting 'lib'...
+[16:20:04] Finished 'lib' after 1.22 ms
+[16:20:04] Starting 'default'...
+[16:20:04] Finished 'default' after 29 μs
+[16:20:05] Starting 'js'...
+[16:20:05] Finished 'js' after 325 μs
+[16:20:05] Starting 'less'...
+[16:20:05] Finished 'less' after 2.25 ms
+[16:20:05] Starting 'lib'...
+[16:20:05] Finished 'lib' after 2.81 ms
+[16:20:05] Starting 'default'...
+[16:20:05] Finished 'default' after 3.95 μs
+[16:20:39] Starting 'js'...
+[16:20:39] Finished 'js' after 231 μs
+[16:20:39] Starting 'less'...
+[16:20:39] Finished 'less' after 1.44 ms
+[16:20:39] Starting 'lib'...
+[16:20:39] Finished 'lib' after 1.2 ms
+[16:20:39] Starting 'default'...
+[16:20:39] Finished 'default' after 2.8 μs
+[16:20:40] Starting 'js'...
+[16:20:40] Finished 'js' after 311 μs
+[16:20:40] Starting 'less'...
+[16:20:40] Finished 'less' after 2.8 ms
+[16:20:40] Starting 'lib'...
+[16:20:40] Finished 'lib' after 5.66 ms
+[16:20:40] Starting 'default'...
+[16:20:40] Finished 'default' after 6.34 μs
+[16:20:59] Starting 'js'...
+[16:20:59] Finished 'js' after 335 μs
+[16:20:59] Starting 'less'...
+[16:20:59] Finished 'less' after 3.16 ms
+[16:20:59] Starting 'lib'...
+[16:20:59] Finished 'lib' after 1.36 ms
+[16:20:59] Starting 'default'...
+[16:20:59] Finished 'default' after 3.07 μs
+[16:21:00] { [Error: Unrecognised input in file /Users/mango/web/app/psd-to-img/statics/src/p/list/index.less line no. 50]
+  type: 'Parse',
+  filename: '/Users/mango/web/app/psd-to-img/statics/src/p/list/index.less',
+  index: 910,
+  line: 50,
+  callLine: NaN,
+  callExtract: undefined,
+  column: 13,
+  extract: [ '\t\t\t.box .cover {', '\t\t\t\theight: 0；', '\t\t\t}' ],
+  message: 'Unrecognised input in file /Users/mango/web/app/psd-to-img/statics/src/p/list/index.less line no. 50',
+  stack: undefined,
+  lineNumber: 50,
+  fileName: '/Users/mango/web/app/psd-to-img/statics/src/p/list/index.less',
+  name: 'Error',
+  showStack: false,
+  showProperties: true,
+  plugin: 'gulp-less',
+  __safety: { toString: [Function] } }
+[16:21:01] Starting 'js'...
+[16:21:01] Finished 'js' after 407 μs
+[16:21:01] Starting 'less'...
+[16:21:01] Finished 'less' after 2.77 ms
+[16:21:01] Starting 'lib'...
+[16:21:01] Finished 'lib' after 2.25 ms
+[16:21:01] Starting 'default'...
+[16:21:01] Finished 'default' after 4.65 μs
+[16:22:36] Starting 'js'...
+[16:22:36] Finished 'js' after 374 μs
+[16:22:36] Starting 'less'...
+[16:22:36] Finished 'less' after 2.25 ms
+[16:22:36] Starting 'lib'...
+[16:22:36] Finished 'lib' after 1.56 ms
+[16:22:36] Starting 'default'...
+[16:22:36] Finished 'default' after 3.04 μs
+[16:22:57] Starting 'js'...
+[16:22:57] Finished 'js' after 407 μs
+[16:22:57] Starting 'less'...
+[16:22:57] Finished 'less' after 1.59 ms
+[16:22:57] Starting 'lib'...
+[16:22:57] Finished 'lib' after 1.87 ms
+[16:22:57] Starting 'default'...
+[16:22:57] Finished 'default' after 2.77 μs
+[16:23:11] Starting 'js'...
+[16:23:11] Finished 'js' after 327 μs
+[16:23:11] Starting 'less'...
+[16:23:11] Finished 'less' after 2.36 ms
+[16:23:11] Starting 'lib'...
+[16:23:11] Finished 'lib' after 1.48 ms
+[16:23:11] Starting 'default'...
+[16:23:11] Finished 'default' after 5.68 μs
+[16:23:28] Starting 'js'...
+[16:23:28] Finished 'js' after 515 μs
+[16:23:28] Starting 'less'...
+[16:23:28] Finished 'less' after 2.95 ms
+[16:23:28] Starting 'lib'...
+[16:23:28] Finished 'lib' after 1.88 ms
+[16:23:28] Starting 'default'...
+[16:23:28] Finished 'default' after 3.01 μs
+[16:27:48] Starting 'js'...
+[16:27:48] Finished 'js' after 576 μs
+[16:27:48] Starting 'less'...
+[16:27:48] Finished 'less' after 1.95 ms
+[16:27:48] Starting 'lib'...
+[16:27:48] Finished 'lib' after 1.13 ms
+[16:27:48] Starting 'default'...
+[16:27:48] Finished 'default' after 3.6 μs
+[16:28:40] Starting 'js'...
+[16:28:40] Finished 'js' after 744 μs
+[16:28:40] Starting 'less'...
+[16:28:40] Finished 'less' after 1.17 ms
+[16:28:40] Starting 'lib'...
+[16:28:40] Finished 'lib' after 876 μs
+[16:28:40] Starting 'default'...
+[16:28:40] Finished 'default' after 2.6 μs
+[16:29:30] Starting 'js'...
+[16:29:30] Finished 'js' after 276 μs
+[16:29:30] Starting 'less'...
+[16:29:30] Finished 'less' after 1.7 ms
+[16:29:30] Starting 'lib'...
+[16:29:30] Finished 'lib' after 1.23 ms
+[16:29:30] Starting 'default'...
+[16:29:30] Finished 'default' after 2.94 μs
+[16:29:43] Starting 'js'...
+[16:29:43] Finished 'js' after 291 μs
+[16:29:43] Starting 'less'...
+[16:29:43] Finished 'less' after 1.6 ms
+[16:29:43] Starting 'lib'...
+[16:29:43] Finished 'lib' after 1.15 ms
+[16:29:43] Starting 'default'...
+[16:29:43] Finished 'default' after 2.93 μs
+[16:30:01] Starting 'js'...
+[16:30:01] Finished 'js' after 392 μs
+[16:30:01] Starting 'less'...
+[16:30:01] Finished 'less' after 1.71 ms
+[16:30:01] Starting 'lib'...
+[16:30:01] Finished 'lib' after 1.68 ms
+[16:30:01] Starting 'default'...
+[16:30:01] Finished 'default' after 5.69 μs
+[16:58:47] Starting 'js'...
+[16:58:47] Finished 'js' after 300 μs
+[16:58:47] Starting 'less'...
+[16:58:47] Finished 'less' after 2.27 ms
+[16:58:47] Starting 'lib'...
+[16:58:47] Finished 'lib' after 867 μs
+[16:58:47] Starting 'default'...
+[16:58:47] Finished 'default' after 3.08 μs
+[19:24:54] Starting 'js'...
+[19:24:54] Finished 'js' after 3.37 ms
+[19:24:54] Starting 'less'...
+[19:24:54] Finished 'less' after 6.03 ms
+[19:24:54] Starting 'lib'...
+[19:24:54] Finished 'lib' after 1.94 ms
+[19:24:54] Starting 'default'...
+[19:24:54] Finished 'default' after 18 μs
+[32m[2015-12-15 10:22:01.446] [INFO] db - [39m连接数据库 library
+[32m[2015-12-15 10:22:01.485] [INFO] db - [39m数据库连接成功
+[36m[2015-12-15 10:22:01.485] [DEBUG] db - [39musers 已经初始化
+I am listening the port of 8181
+{ pdfFilePath: '/tmp/doc-library/DB/publick/1450146153186.pdf',
+  pdfFileBaseName: '1450146153186',
+  convertOptions: {},
+  outputDirectory: '/tmp/doc-library/DB/publick' }
+[33m[nodemon] 1.8.1[39m
+[33m[nodemon] to restart at any time, enter `rs`[39m
+[33m[nodemon] watching: *.*[39m
+[32m[nodemon] starting `node app.js`[39m
+events.js:141
+      throw er; // Unhandled 'error' event
+      ^
+
+Error: EBADF: bad file descriptor, read
+    at Error (native)
+[33m[nodemon] 1.8.1[39m
+[33m[nodemon] to restart at any time, enter `rs`[39m
+[33m[nodemon] watching: *.*[39m
+[32m[nodemon] starting `node app.js`[39m
+events.js:141
+      throw er; // Unhandled 'error' event
+      ^
+
+Error: EBADF: bad file descriptor, read
+    at Error (native)
+[32m[2015-12-15 16:52:34.681] [INFO] db - [39m连接数据库 library
+[32m[2015-12-15 16:52:34.720] [INFO] db - [39m数据库连接成功
+[36m[2015-12-15 16:52:34.720] [DEBUG] db - [39musers 已经初始化
+I am listening the port of 8181
+[32m[2015-12-22 16:06:03.533] [INFO] db - [39m连接数据库 library
+[32m[2015-12-22 16:06:03.572] [INFO] db - [39m数据库连接成功
+[36m[2015-12-22 16:06:03.572] [DEBUG] db - [39musers 已经初始化
+I am listening the port of 8181
+/tmp/doc-library2/node_modules/express/lib/router/route.js:196
+        throw new Error(msg);
+        ^
+
+Error: Route.get() requires callback functions but got a [object Undefined]
+  at Route.(anonymous function) [as get] (/tmp/doc-library2/node_modules/express/lib/router/route.js:196:15)
+  at Function.proto.(anonymous function) [as get] (/tmp/doc-library2/node_modules/express/lib/router/index.js:510:19)
+  at Object.<anonymous> (/tmp/doc-library2/route.js:44:8)
+  at Module._compile (module.js:425:26)
+  at Object.Module._extensions..js (module.js:432:10)
+  at Module.load (module.js:356:32)
+  at Function.Module._load (module.js:313:12)
+  at Module.require (module.js:366:17)
+  at require (module.js:385:17)
+  at Object.<anonymous> (/tmp/doc-library2/app.js:9:14)
+  at Module._compile (module.js:425:26)
+  at Object.Module._extensions..js (module.js:432:10)
+  at Module.load (module.js:356:32)
+  at Function.Module._load (module.js:313:12)
+  at Function.Module.runMain (module.js:457:10)
+  at startup (node.js:138:18)
+  at node.js:974:3
+
+/tmp/doc-library2/node_modules/express/lib/router/route.js:196
+        throw new Error(msg);
+        ^
+
+Error: Route.get() requires callback functions but got a [object Undefined]
+  at Route.(anonymous function) [as get] (/tmp/doc-library2/node_modules/express/lib/router/route.js:196:15)
+  at Function.proto.(anonymous function) [as get] (/tmp/doc-library2/node_modules/express/lib/router/index.js:510:19)
+  at Object.<anonymous> (/tmp/doc-library2/route.js:44:8)
+  at Module._compile (module.js:425:26)
+  at Object.Module._extensions..js (module.js:432:10)
+  at Module.load (module.js:356:32)
+  at Function.Module._load (module.js:313:12)
+  at Module.require (module.js:366:17)
+  at require (module.js:385:17)
+  at Object.<anonymous> (/tmp/doc-library2/app.js:9:14)
+  at Module._compile (module.js:425:26)
+  at Object.Module._extensions..js (module.js:432:10)
+  at Module.load (module.js:356:32)
+  at Function.Module._load (module.js:313:12)
+  at Function.Module.runMain (module.js:457:10)
+  at startup (node.js:138:18)
+  at node.js:974:3
+
+[32m[2015-12-23 17:10:18.472] [INFO] db - [39m连接数据库 library
+[32m[2015-12-23 17:10:18.514] [INFO] db - [39m数据库连接成功
+[36m[2015-12-23 17:10:18.514] [DEBUG] db - [39musers 已经初始化
+I am listening the port of 8181
+[32m[2015-12-23 18:45:05.020] [INFO] db - [39m连接数据库 library
+[32m[2015-12-23 18:45:05.060] [INFO] db - [39m数据库连接成功
+[36m[2015-12-23 18:45:05.060] [DEBUG] db - [39musers 已经初始化
+I am listening the port of 8181

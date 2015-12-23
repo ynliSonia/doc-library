@@ -1,0 +1,37 @@
+{{ extend ("./layout") }}
+
+{{#block ("body")}}
+
+	<div class="main-content">
+		<div class="clearfix">
+			<a href="javascript:;" class="add-btn J_add_doc">新建文档</a><span class="upload-warming">支持批量上传哦~</span>
+			<form id="J_doc_form" action="/addItem" method="post" enctype="multipart/form-data"  >
+				<input type="hidden" name="director_id" value="{{id}}" />
+				<input type="file" name="docs" multiple class="J_doc_file doc-file" />
+			</form>
+		</div>
+		<div class="dl-docs">
+			<ul class="doc-list">
+				{{#each(list)}}
+				<li class="doc-item">
+					<a href="/detail/{{this.id}}" class="preview">
+						<img src="{{this.docPath}}" />
+					</a>
+					<div class="infos">
+						<p class="name"><a href="./">{{this.name}}</a></p>
+						<div class="time-show">
+							<div class="icons">
+								<a href="javascript:;" class="ps-icon-font J_show_ewm">&#xe602;</a>
+								<div class="J_qrcode qrcode-box" data-url="/detail/{{this.id}}">
+								</div>
+								<a href="{{this.download}}" download class="ps-icon-font">&#xe604;</a>
+							</div>
+						</div>
+						<p class="doc-desc">{{this.desc}} {{this.times}}</p>
+					</div>
+				</li>
+				{{/each}}
+			</ul>
+		</div>
+	</div>
+{{/block}}

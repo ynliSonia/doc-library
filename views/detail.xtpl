@@ -1,0 +1,23 @@
+<html>
+    <head>
+        <meta name="charset" content="utf-8" />
+        <title>{{title}}</title>
+        <link type="text/css" href="/assets/build/lib/bootstrap.min.css" rev="stylesheet" rel="stylesheet"/>
+        <link type="text/css" href="/assets/build/p/{{pageName}}/index.css" rev="stylesheet" rel="stylesheet"/>
+
+    </head>
+    <body>
+        <div class="library-detail">
+	{{#if(list.length > 0)}}
+            {{#each(list)}}
+			<img src="{{this}}" />
+            {{/each}}
+	{{/if}}
+	{{#if(htmlPath)}}
+	<iframe src={{htmlPath}} scrolling="no" frameborder="0" onload="this.width=this.contentWindow.document.documentElement.scrollWidth;this.height=this.contentWindow.document.documentElement.scrollHeight" ></iframe>
+	{{/if}}
+		</div>
+    </body>
+    <script src="/assets/build/lib/jquery.min.js"></script>
+    <script src="/assets/build/p/{{pageName}}/index.js"></script>
+</html>

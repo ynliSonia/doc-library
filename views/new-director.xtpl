@@ -1,0 +1,32 @@
+{{ extend ("./layout") }}
+
+{{#block ("body")}}
+
+    <div class="add-doc">
+        <form action="/addDirector" method="post" enctype="multipart/form-data"  class="form-horizontal">
+            <div class="form-group">
+                <label for="J_name" class="col-sm-2 control-label">文档名称</label>
+                <div class="col-xs-3">
+                  <input type=" text" class="form-control" id="J_name" name="name" placeholder="文档名称">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="J_desc" class="col-sm-2 control-label">文档描述</label>
+                <div class="col-xs-3">
+                  <textarea name="desc" id="J_desc" class="form-control" rows="3"></textarea>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="J_cover_img" class="col-sm-2 control-label">封面图片</label>
+                <div class="col-xs-3">
+                    <input type="file" class="form-control" name="cover_img" id="J_cover_img" />
+                </div>
+            </div>
+            <input type="hidden" name="author_id" value="{{this.id}}">
+            <div class="btn-box">
+                <input type="submit" id="J_btn" value="添加" class="btn btn-default" />
+            </div>
+
+        </form>
+    </div>
+{{/block}}
