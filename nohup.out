@@ -616,6 +616,7 @@ Error: listen EADDRINUSE :::8181
 [19:24:54] Finished 'lib' after 1.94 ms
 [19:24:54] Starting 'default'...
 [19:24:54] Finished 'default' after 18 μs
+<<<<<<< HEAD
 [32m[2015-12-15 10:22:01.446] [INFO] db - [39m连接数据库 library
 [32m[2015-12-15 10:22:01.485] [INFO] db - [39m数据库连接成功
 [36m[2015-12-15 10:22:01.485] [DEBUG] db - [39musers 已经初始化
@@ -706,3 +707,5 @@ I am listening the port of 8181
 [32m[2015-12-23 18:45:05.060] [INFO] db - [39m数据库连接成功
 [36m[2015-12-23 18:45:05.060] [DEBUG] db - [39musers 已经初始化
 I am listening the port of 8181
+=======
+>>>>>>> eaa0e6c1de7c435fc96c3a5d0ce716ac512638a2

@@ -3,7 +3,11 @@ var express = require('express');
 var router = express.Router();
 var task = require('./controller/task');
 var detail = require('./controller/detail');
+<<<<<<< HEAD
 var editor = require('./controller/editor');
+=======
+
+>>>>>>> eaa0e6c1de7c435fc96c3a5d0ce716ac512638a2
 
 // 首页
 router.get('/', task.index);
