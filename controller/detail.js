@@ -65,7 +65,7 @@ var Methors = {
 	    	}
 	    }
 	    return flag;
-
+	},
 	office2Pdf: function(newPath, resolve, reject) {
 		var self = this;
 		var docPath = PATH_CONF + newPath.substring(5);

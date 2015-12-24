@@ -121,15 +121,15 @@ exports.detail = function(req, res, next) {
 		   .then(function(detail) {
 
 		   	var docPath = detail ? detail[0].docPath : '';
-<<<<<<< HEAD
-		   	res.render('detail', {title: '详情', pageName: 'detail', docPath: docPath});
-		   })
-=======
+
+
+
+
 		   	var docPaths = [];
 		   	docPaths.push(docPath);
 		   	res.render('detail', {title: '详情', pageName: 'detail', docPath: docPath});
 		})
->>>>>>> eaa0e6c1de7c435fc96c3a5d0ce716ac512638a2
+
 }
 
 

@@ -4,22 +4,22 @@ var path = require('path');
 var formidable = require('formidable');
 var PSD = require('psd');
 var PdfImage = require('pdf-image');
-<<<<<<< HEAD
+
 var Promise = require('bluebird');
 var Office2Html = require('./common/office2html');
-=======
-var qrcode = require('node-qrcode');
-var Promise = require('bluebird');
->>>>>>> eaa0e6c1de7c435fc96c3a5d0ce716ac512638a2
+
+
+
+
 
 var dataPath = path.resolve(__dirname, '../DB/task.json');
 var groupPath = path.resolve(__dirname, '../DB/group.json');
 var publick = path.resolve(__dirname, '../DB/publick/');
 var qrcodeDir = path.resolve(__dirname, '../DB/qrcode/');
-<<<<<<< HEAD
+
 var officePath = path.resolve(__dirname, '../DB/offices');
-=======
->>>>>>> eaa0e6c1de7c435fc96c3a5d0ce716ac512638a2
+
+
 
 var helper = require('../helper');
 var db = helper.db;
@@ -144,17 +144,17 @@ exports.add = function(req, res) {
 
 			    	var newPath = form.uploadDir + '/' + avatarName + '.' + extName;
 			    	var pngPath = form.uploadDir + '/' + avatarName + '.' + 'png';
-<<<<<<< HEAD
+
 				
 
 			    	// 把源文件传入
 			    	fs.renameSync(doc.path, newPath);
 				var officeList = ['doc', 'docx', 'xlsx', 'xls', 'xlsm', 'xltx', 'xlsb', 'ppt'];
-=======
 
-			    	// 把源文件传入
-			    	fs.renameSync(doc.path, newPath);
->>>>>>> eaa0e6c1de7c435fc96c3a5d0ce716ac512638a2
+
+
+
+
 
 			    	// 把 PSD文件转为 png 存储，方便查看
 
@@ -164,13 +164,13 @@ exports.add = function(req, res) {
 			   		if(extName === 'pdf') {
 			   			pdfToImage(newPath, pngPath);
 			   		}
-<<<<<<< HEAD
+
 				if(inArray(extName, officeList)) {	
 					Office2Html.convertToHtml(newPath);
 
 				}
-=======
->>>>>>> eaa0e6c1de7c435fc96c3a5d0ce716ac512638a2
+
+
 			   		(function(name, i, extName){
 
 				   		self.find({})
@@ -184,24 +184,24 @@ exports.add = function(req, res) {
 				   					id = 1000000 + i;
 				   				}
 				   				var docPath = '/docs/publick/' + avatarName + '.' + extName;
-<<<<<<< HEAD
+
 								var htmlPath = ''; 
  
-=======
 
->>>>>>> eaa0e6c1de7c435fc96c3a5d0ce716ac512638a2
+
+
 								if(extName === 'psd') {
 									docPath = '/docs/publick/' + avatarName + '.png';
 								}
 								if(extName === 'pdf') {
 									docPath = '/docs/publick/' + avatarName + '-0.png';
 								}
-<<<<<<< HEAD
+
 								if(inArray(extName, officeList)) {
 									htmlPath = '/docs/offices/' + avatarName + '.html';
 								}
-=======
->>>>>>> eaa0e6c1de7c435fc96c3a5d0ce716ac512638a2
+
+
 								if(setDefaultImg(extName) !== '') {
 									docPath = setDefaultImg(extName);
 								}
@@ -226,12 +226,12 @@ exports.add = function(req, res) {
 										docPath: docPath,
 										download: '/docs/publick/' + avatarName + '.' + extName,
 										director_id: fields.director_id,
-<<<<<<< HEAD
+
 										name: name,
 										html_path: htmlPath
-=======
-										name: name
->>>>>>> eaa0e6c1de7c435fc96c3a5d0ce716ac512638a2
+
+										
+
 									}
 
 									db.insert(dbName, item);
@@ -280,8 +280,8 @@ exports.delItem = function(delId) {
 
 	fs.writeFileSync(dataPath, JSON.stringify(result), {encoding: 'utf8'});
 	return flag;
-<<<<<<< HEAD
+
 }
-=======
-}
->>>>>>> eaa0e6c1de7c435fc96c3a5d0ce716ac512638a2
+
+
+
