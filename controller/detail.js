@@ -47,11 +47,9 @@ var Methors = {
 			if(err) {
 				reject();
 				return;
-			
 			}
-			console.log(result);
+			// console.log(result);
 			//fs.writeFile(tmpHtml + 'temp.html', result);
-			
 		})
 	},
 	// 自定义，判断某个值是否在列表中
@@ -65,27 +63,27 @@ var Methors = {
 	    	}
 	    }
 	    return flag;
-	},
-	office2Pdf: function(newPath, resolve, reject) {
-		var self = this;
-		var docPath = PATH_CONF + newPath.substring(5);
-		unoconv.convert(docPath, 'pdf', function(err, result) {
-
-			if(err) {
-				reject();
-				return;
-			}
-			fs.writeFile(tmpPdf + '/temp.pdf', result);
-			self.pdf2Image(tmpPdf + '/temp.pdf', resolve);
-		});
-
 	}
+	// office2Pdf: function(newPath, resolve, reject) {
+	// 	var self = this;
+	// 	var docPath = PATH_CONF + newPath.substring(5);
+	// 	unoconv.convert(docPath, 'pdf', function(err, result) {
+
+	// 		if(err) {
+	// 			reject();
+	// 			return;
+	// 		}
+	// 		fs.writeFile(tmpPdf + '/temp.pdf', result);
+	// 		self.pdf2Image(tmpPdf + '/temp.pdf', resolve);
+	// 	});
+
+	// }
 }
 
 // 详情预览
 exports.review = function(req, res, next) {
 
-	var officeList = ['pptx', 'doc', 'docx', 'xlsx', 'xls', 'xlsm', 'xltx', 'xlsb', 'ppt'];
+	var officeList = ['doc', 'docx', 'xlsx', 'xls', 'xlsm', 'xltx', 'xlsb'];
 	var docId = parseInt(req.params.id);
 	var docList = [];
 	Library.find({id: docId})
@@ -95,13 +93,19 @@ exports.review = function(req, res, next) {
 
 		   	if(extName === 'pdf') {
 		   		Methors.pdf2Image(detail[0].download, function(imgList) {
-				
+
 		   			res.render('detail', {title: '详情', pageName: 'detail', list: imgList});
 		   		});
 		   		return ;
 		   	} else if(Methors.inArray(extName, officeList)){
-			
-				res.render('detail', {title: '详情', pageName: 'detail', list: [], htmlPath: detail[0].html_path});
+
+				res.render('detail', {title: '详情', pageName: 'detail', list: [], htmlPath: detail[0].convert_path});
+			} else if(extName === 'ppt' || extName === 'pptx') {
+
+				// console.log(detail[0], detail[0].convert_path);
+				Methors.pdf2Image(detail[0].convert_path, function(imgList) {
+					res.render('detail', {title: '详情', pageName: 'detail', list: imgList});
+				})
 			} else {
 			docList.push(docPath);
 		   	res.render('detail', {title: '详情', pageName: 'detail', list: docList});}

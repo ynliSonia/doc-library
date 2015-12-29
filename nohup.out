@@ -747,3 +747,11 @@ I am listening the port of 8181
 [TypeError: new path must be a string]
 [TypeError: new path must be a string]
 [TypeError: new path must be a string]
+[32m[2015-12-29 17:23:41.765] [INFO] db - [39m连接数据库 library
+[32m[2015-12-29 17:23:41.805] [INFO] db - [39m数据库连接成功
+[36m[2015-12-29 17:23:41.805] [DEBUG] db - [39musers 已经初始化
+I am listening the port of 8181
+[32m[2015-12-29 17:26:12.391] [INFO] db - [39m连接数据库 library
+[32m[2015-12-29 17:26:12.432] [INFO] db - [39m数据库连接成功
+[36m[2015-12-29 17:26:12.433] [DEBUG] db - [39musers 已经初始化
+I am listening the port of 8181

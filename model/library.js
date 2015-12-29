@@ -8,10 +8,6 @@ var PdfImage = require('pdf-image');
 var Promise = require('bluebird');
 var Office2Html = require('./common/office2html');
 
-
-
-
-
 var dataPath = path.resolve(__dirname, '../DB/task.json');
 var groupPath = path.resolve(__dirname, '../DB/group.json');
 var publick = path.resolve(__dirname, '../DB/publick/');
@@ -43,9 +39,10 @@ function setDefaultImg(extName) {
 		case 'xlsb':
 		imgPath = '/docs/default/excel.png';
 		break;
-		// case 'pdf':
-		// imgPath = '/docs/default/pdf.png';
-		// break;
+		case 'ppt':
+		case 'pptx':
+		imgPath = '/docs/default/default.png'
+		break;
 	}
 
 	return imgPath;
@@ -148,7 +145,7 @@ exports.add = function(req, res) {
 
 			    	// 把源文件传入
 			    	fs.renameSync(doc.path, newPath);
-				var officeList = ['pptx', 'doc', 'docx', 'xlsx', 'xls', 'xlsm', 'xltx', 'xlsb', 'ppt'];
+					var officeList = ['doc', 'docx', 'xlsx', 'xls', 'xlsm', 'xltx', 'xlsb'];
 
 			    	// 把 PSD文件转为 png 存储，方便查看
 
@@ -159,11 +156,14 @@ exports.add = function(req, res) {
 			   			pdfToImage(newPath, pngPath);
 			   		}
 
-				if(inArray(extName, officeList)) {	
-					Office2Html.convertToHtml(newPath);
+					if(inArray(extName, officeList)) {
+						Office2Html.convertToHtml(newPath);
 
-				}
+					}
 
+					if(extName === 'ppt' || extName === 'pptx') {
+						Office2Html.convertToPdf(newPath);
+					}
 			   		(function(name, i, extName){
 
 				   		self.find({})
@@ -178,7 +178,7 @@ exports.add = function(req, res) {
 				   				}
 				   				var docPath = '/docs/publick/' + avatarName + '.' + extName;
 
-								var htmlPath = ''; 
+								var convertPath = ''; 
 
 								if(extName === 'psd') {
 									docPath = '/docs/publick/' + avatarName + '.png';
@@ -188,9 +188,11 @@ exports.add = function(req, res) {
 								}
 
 								if(inArray(extName, officeList)) {
-									htmlPath = '/docs/offices/' + avatarName + '.html';
+									convertPath = '/docs/offices/' + avatarName + '.html';
 								}
-
+								if(extName === 'ppt' || extName === 'pptx') {
+									convertPath = '/docs/offices/' + avatarName + '.pdf';
+								}
 
 								if(setDefaultImg(extName) !== '') {
 									docPath = setDefaultImg(extName);
@@ -218,9 +220,7 @@ exports.add = function(req, res) {
 										director_id: fields.director_id,
 										times: new Date(),
 										name: name,
-										html_path: htmlPath
-
-										
+										convert_path: convertPath
 
 									}
 
