@@ -18,7 +18,7 @@ var publick = path.resolve(__dirname, '../DB/publick/');
 var qrcodeDir = path.resolve(__dirname, '../DB/qrcode/');
 
 var officePath = path.resolve(__dirname, '../DB/offices');
-
+var exec = require('child_process').exec;
 
 
 var helper = require('../helper');
@@ -97,6 +97,7 @@ function generatorQRCode(text, qrcodePath, callback) {
 // 查找
 exports.find = function(query) {
 	db = helper.db;
+	
 	return db.find(dbName, query);
 }
 
@@ -133,7 +134,7 @@ exports.add = function(req, res) {
 					doc = docsList[i];
 					var name = doc.name; //.substring(0, doc.name.lastIndexOf("."));
 					extName = doc.name.substring(doc.name.lastIndexOf(".") + 1).toLowerCase();
-					var extList = ['jpg', 'jpeg', 'png', 'gif', 'psd', 'pdf', 'doc', 'docx', 'zip', 'rar', 'gzip', 'xlsx', 'xls', 'xlsm', 'xltx', 'xlsb', 'ppt', 'txt'];
+					var extList = ['jpg', 'jpeg', 'png', 'gif', 'psd', 'pdf', 'doc', 'docx', 'zip', 'rar', 'gzip', 'xlsx', 'xls', 'xlsm', 'xltx', 'xlsb', 'ppt', 'pptx', 'txt'];
 					if(!inArray(extName, extList)) {
 						reject('暂时不支持该类型文件的上传');
 						return ;
@@ -145,16 +146,9 @@ exports.add = function(req, res) {
 			    	var newPath = form.uploadDir + '/' + avatarName + '.' + extName;
 			    	var pngPath = form.uploadDir + '/' + avatarName + '.' + 'png';
 
-				
-
 			    	// 把源文件传入
 			    	fs.renameSync(doc.path, newPath);
-				var officeList = ['doc', 'docx', 'xlsx', 'xls', 'xlsm', 'xltx', 'xlsb', 'ppt'];
-
-
-
-
-
+				var officeList = ['pptx', 'doc', 'docx', 'xlsx', 'xls', 'xlsm', 'xltx', 'xlsb', 'ppt'];
 
 			    	// 把 PSD文件转为 png 存储，方便查看
 
@@ -169,7 +163,6 @@ exports.add = function(req, res) {
 					Office2Html.convertToHtml(newPath);
 
 				}
-
 
 			   		(function(name, i, extName){
 
@@ -186,9 +179,6 @@ exports.add = function(req, res) {
 				   				var docPath = '/docs/publick/' + avatarName + '.' + extName;
 
 								var htmlPath = ''; 
- 
-
-
 
 								if(extName === 'psd') {
 									docPath = '/docs/publick/' + avatarName + '.png';
@@ -226,7 +216,7 @@ exports.add = function(req, res) {
 										docPath: docPath,
 										download: '/docs/publick/' + avatarName + '.' + extName,
 										director_id: fields.director_id,
-
+										times: new Date(),
 										name: name,
 										html_path: htmlPath
 
@@ -253,6 +243,25 @@ exports.addDirector = function(req) {
 	
 }
 
+exports.delete = function(req) {
+	db = helper.db;
+	var self = this;
+	var libraryId = parseInt(req.params.id);
+	return new Promise(function(resolve, reject) {
+	   self.find({id: libraryId})
+	    .then(function(libraryItem) {
+		if(libraryItem.length <= 0) return ;
+		db.remove(dbName, {id: libraryId})
+		   .then(function() {
+			var downloadFile = path.resolve(__dirname, '../DB') + libraryItem[0].download.substring(5);
+			var docFile = path.resolve(__dirname, '../DB') + libraryItem[0].docPath.substring(5);
+			exec('rm -f ' + downloadFile);
+			exec('rm -f ' + docFile);
+			resolve();
+		   });
+	    });
+	});
+}
 // 删除任务
 exports.delItem = function(delId) {
 

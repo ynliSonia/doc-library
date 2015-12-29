@@ -33,6 +33,8 @@ router.get('/new/:id', task.new);
 router.get('/doc-list/:id', task.docList);
 // 新增文档接口
 router.post('/addItem', task.addDoc);
+// 删除文档
+router.get('/deleteDoc/:id', task.deleteLibrary);
 
 // 删除某个文档
 router.delete('/del/:id', task.del);

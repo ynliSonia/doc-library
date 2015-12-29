@@ -709,3 +709,41 @@ I am listening the port of 8181
 I am listening the port of 8181
 =======
 >>>>>>> eaa0e6c1de7c435fc96c3a5d0ce716ac512638a2
+[32m[2015-12-24 15:20:28.513] [INFO] db - [39m连接数据库 library
+[32m[2015-12-24 15:20:28.558] [INFO] db - [39m数据库连接成功
+[36m[2015-12-24 15:20:28.559] [DEBUG] db - [39musers 已经初始化
+I am listening the port of 8181
+[32m[2015-12-24 16:27:48.776] [INFO] db - [39m连接数据库 library
+[32m[2015-12-24 16:27:48.816] [INFO] db - [39m数据库连接成功
+[36m[2015-12-24 16:27:48.817] [DEBUG] db - [39musers 已经初始化
+I am listening the port of 8181
+[TypeError: new path must be a string]
+[TypeError: new path must be a string]
+[TypeError: new path must be a string]
+[32m[2015-12-24 17:18:53.115] [INFO] db - [39m连接数据库 library
+Unhandled rejection Error: connect ECONNREFUSED 127.0.0.1:27017
+  at Object.exports._errnoException (util.js:856:11)
+  at exports._exceptionWithHostPort (util.js:879:20)
+  at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1063:14)
+
+[32m[2015-12-24 17:18:59.375] [INFO] db - [39m连接数据库 library
+Unhandled rejection Error: connect ECONNREFUSED 127.0.0.1:27017
+  at Object.exports._errnoException (util.js:856:11)
+  at exports._exceptionWithHostPort (util.js:879:20)
+  at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1063:14)
+
+[32m[2015-12-24 17:21:19.677] [INFO] db - [39m连接数据库 library
+[32m[2015-12-24 17:21:19.717] [INFO] db - [39m数据库连接成功
+[36m[2015-12-24 17:21:19.717] [DEBUG] db - [39musers 已经初始化
+I am listening the port of 8181
+[32m[2015-12-28 14:58:00.867] [INFO] db - [39m连接数据库 library
+[32m[2015-12-28 14:58:00.909] [INFO] db - [39m数据库连接成功
+[36m[2015-12-28 14:58:00.909] [DEBUG] db - [39musers 已经初始化
+I am listening the port of 8181
+[32m[2015-12-28 16:29:16.527] [INFO] db - [39m连接数据库 library
+[32m[2015-12-28 16:29:16.568] [INFO] db - [39m数据库连接成功
+[36m[2015-12-28 16:29:16.568] [DEBUG] db - [39musers 已经初始化
+I am listening the port of 8181
+[TypeError: new path must be a string]
+[TypeError: new path must be a string]
+[TypeError: new path must be a string]

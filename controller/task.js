@@ -29,7 +29,7 @@ exports.newGroup = function(req, res, next) {
 
 // 新增分组接口
 exports.addGroup = function(req, res, next) {
-	Group.add(req)
+	Group.change(req, 'add')
 		.then(function() {
 			res.redirect('/');
 		}, function(status, text) {
@@ -45,6 +45,9 @@ exports.list = function(req, res, next) {
 			.then(function(directors) {
 				var len = directors.length;
 			 	var libObj;
+				directors.sort(function(a, b) {
+					return new Date(a.times).getTime() < new Date(b.times).getTime();
+				})
 			 	for(var i = 0;i< len; i++) {
 			 		libObj = new Date(directors[i].times);
 			 		directors[i].times = libObj.getFullYear() + '-' + (libObj.getMonth()+1) + '-' + libObj.getDate();
@@ -74,7 +77,10 @@ exports.docList = function(req, res, next) {
 	var director_id = req.params.id;
 	Library.find({director_id: director_id})
 		   .then(function(libraries) {
-		   		res.render('doc-list', {title: '文档列表', pageName: 'doc-list', list: libraries, id: req.params.id})
+		   	libraries.sort(function(a, b) {
+				return new Date(a.times).getTime() < new Date(b.times).getTime();
+			})	
+			res.render('doc-list', {title: '文档列表', pageName: 'doc-list', list: libraries, id: req.params.id})
 		   })
 }
 
@@ -96,6 +102,14 @@ exports.addDoc = function(req, res, next) {
 		console.log(text);
 		res.json({status: 0, text: 'text'});
 	});
+}
+
+// 删除文档
+exports.deleteLibrary = function(req, res, next) {
+	Library.delete(req)
+	       .then(function() {
+			res.redirect(req.get('referer'));
+		});
 }
 
 // 删除

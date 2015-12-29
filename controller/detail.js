@@ -85,12 +85,12 @@ var Methors = {
 // 详情预览
 exports.review = function(req, res, next) {
 
-	var officeList = ['doc', 'docx', 'xlsx', 'xls', 'xlsm', 'xltx', 'xlsb', 'ppt'];
+	var officeList = ['pptx', 'doc', 'docx', 'xlsx', 'xls', 'xlsm', 'xltx', 'xlsb', 'ppt'];
 	var docId = parseInt(req.params.id);
 	var docList = [];
 	Library.find({id: docId})
 		   .then(function(detail) {
-		   	var docPath = detail ? detail[0].docPath : '';
+		   	var docPath = detail.length > 0 ? detail[0].docPath : '';
 		   	var extName = detail[0].download.substring(detail[0].download.lastIndexOf(".") + 1).toLowerCase();
 
 		   	if(extName === 'pdf') {

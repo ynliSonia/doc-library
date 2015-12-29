@@ -25,8 +25,14 @@ exports.find = function(query) {
 	return db.find(dbName, query);
 }
 
+
+// 修改组信息
+exports.update = function(query, newData) {
+	var db = helper.db;
+	return db.update(dbName, query, newData);
+}
 // 增加新的组
-exports.add = function(req) {
+exports.change = function(req, type) {
 	var db = helper.db;
 	// var groupsObj = fs.readFileSync(groupPath, 'utf-8');
 	var self = this;
@@ -63,8 +69,8 @@ exports.add = function(req) {
 		      	extName='gif';
 		      	break;
 		    }
-
-	    	if(extName === '') {
+		
+	    	if(extName === '' && (type === 'edit' && files.photo.size > 0)) {
 	    		reject(-2, '不支持该类型的文件');
 	    		return ;
 	    	}
@@ -76,6 +82,7 @@ exports.add = function(req) {
 	    	fs.renameSync(files.photo.path, newPath);
 
 			// var id = 10000 + 3;
+		if(type === 'add') {
 			self.find({})
 			  .then(function(groups) {
 			  	groups.sort(function(a, b) {
@@ -95,9 +102,33 @@ exports.add = function(req) {
 				db.insert('groups', item);
 				resolve();
 			  })
+		} else {
+			var groupId = parseInt(fields.groupId);
+			self.find({id: groupId})
+				.then(function(groups) {
+					if(groups.length <= 0) return ;
+					var newData = groups[0];
+					newData.name = fields.name;
+					newData.identity = fields.identity;
+					if(files.photo.size > 0){
+						 newData.photo = '/docs/photos/' + avatarName + '.' + extName;
+					}
+				
+					self.update({id: groupId}, newData);
+					resolve();
+				});
+		}
 		});
 	});
 }
+
+
+
+
+
+
+
+
 
 // 删除组
 exports.delGroup = function(delId) {

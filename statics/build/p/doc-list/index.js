@@ -50,7 +50,7 @@
 				var qrLen = qrcodes.length;
 				var qrcodePath;
 				for (var i = 0; i < qrLen; i++) {
-					qrcodePath = 'http://127.0.0.1:8181' + $(qrcodes[i]).attr('data-url');
+					qrcodePath = 'http://172.16.11.10:8181' + $(qrcodes[i]).attr('data-url');
 					$(qrcodes[i]).qrcode({
 						text: qrcodePath,
 						width: 100,
