@@ -46,6 +46,7 @@ exports.add = function(req) {
 				return false;
 			}
 
+
 			// 根据类型确定文件的后缀名
 			var extName = '';  //后缀名
 		    switch (files.cover_img.type) {

@@ -8,7 +8,7 @@
     </head>
     <body>
         <div class="library-detail">
-<<<<<<< HEAD
+
 	{{#if(list.length > 0)}}
             {{#each(list)}}
 			<img src="{{this}}" />
@@ -17,17 +17,17 @@
 	{{#if(htmlPath)}}
 	<iframe src={{htmlPath}} scrolling="no" frameborder="0" onload="this.width=this.contentWindow.document.documentElement.scrollWidth;this.height=this.contentWindow.document.documentElement.scrollHeight" ></iframe>
 	{{/if}}
-=======
-            {{#each(list)}}
-			<img src="{{this}}" />
-            {{/each}}
->>>>>>> eaa0e6c1de7c435fc96c3a5d0ce716ac512638a2
+
+
+
+
+
 		</div>
     </body>
     <script src="/assets/build/lib/jquery.min.js"></script>
     <script src="/assets/build/p/{{pageName}}/index.js"></script>
-<<<<<<< HEAD
+
 </html>
-=======
-</html>
->>>>>>> eaa0e6c1de7c435fc96c3a5d0ce716ac512638a2
+
+
+

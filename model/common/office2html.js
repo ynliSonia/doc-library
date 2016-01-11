@@ -5,8 +5,6 @@ var outdir = path.resolve(__dirname, '../../DB/offices');
 
 module.exports = {
 	convertToHtml: function(fileName, resolve, reject) {
-	
-		
 		exec('/usr/bin/libreoffice --headless --convert-to html --outdir ' + outdir + ' ' + fileName, function(err){
 				if(err) {
 					reject();
@@ -14,6 +12,14 @@ module.exports = {
 				}
 				resolve && resolve();
 			});
-	
+	},
+	convertToPdf: function(fileName, resolve, reject) {
+		exec('/usr/bin/libreoffice --headless --convert-to pdf --outdir ' + outdir + ' ' + fileName, function(err){
+				if(err) {
+					reject();
+					return ;
+				}
+				resolve && resolve();
+			});
 	}
 }

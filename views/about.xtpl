@@ -1,12 +1,21 @@
+
 {{ extend ("./layout") }}
 
 {{#block ("body")}}
 	<div class="lib-about">
+<<<<<<< HEAD
 		<h1>1. 文档库介绍</h1>
 		<div class="content">
 		文档库用于内部建设使用，主要是为了文档的存储和共享，在线的文档库相较于 ftp 使用更加方便，也利于分享。
 		</div>
 		<h1>2. 文档库功能列表</h1>
+=======
+		<h1>1. DSP 介绍</h1>
+		<div class="content">
+		DSP 用于内部建设使用，主要是为了文档的存储和共享，在线的文档库相较于 ftp 使用更加方便，也利于分享。
+		</div>
+		<h1>2. DSP 功能列表</h1>
+>>>>>>> 5d3a252e509d8ba41602fca712da0051c62ad198
 		<h2>1.1 psd 在线预览，支持 PC 和 H5</h2>
 		<div class="content">
 			<p> 1）无需下载 photoshop，即时在线预览，一键分享，再也不用邮件+附件，一个链接搞定设计稿分享 </p>
@@ -28,7 +37,11 @@
 			<p> 代码库：<a href="https://github.com/ynliSonia/doc-library" target="_blank">https://github.com/ynliSonia/doc-library</a> </p>
 		</div>
 		<h1>5. 写在最后</h1>
+<<<<<<< HEAD
 		<div>文档库的主要目的是为了内部沟通，使用中有什么问题或者什么需求都可以直接联系开发者，合理需求都会被接受哒~</div>
+=======
+		<div>DSP 的主要目的是为了内部沟通，使用中有什么问题或者什么需求都可以直接联系开发者，合理需求都会被接受哒~</div>
+>>>>>>> 5d3a252e509d8ba41602fca712da0051c62ad198
 	</div>
 
 {{/block}}

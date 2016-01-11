@@ -25,6 +25,7 @@
 								<div class="J_qrcode qrcode-box" data-url="/detail/{{this.id}}">
 								</div>
 								<a href="{{this.download}}" download class="ps-icon-font">&#xe604;</a>
+								<a href="/deleteDoc/{{this.id}}" class="ps-icon-font">&#xe607;</a>
 							</div>
 						</div>
 						<p class="doc-desc">{{this.desc}} {{this.times}}</p>
