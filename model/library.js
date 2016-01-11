@@ -256,7 +256,10 @@ exports.delete = function(req) {
 			var downloadFile = path.resolve(__dirname, '../DB') + libraryItem[0].download.substring(5);
 			var docFile = path.resolve(__dirname, '../DB') + libraryItem[0].docPath.substring(5);
 			exec('rm -f ' + downloadFile);
-			exec('rm -f ' + docFile);
+			if(docFile.indexOf('/default/')) {
+				 exec('rm -f ' + docFile);
+			}
+		
 			resolve();
 		   });
 	    });
