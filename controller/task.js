@@ -52,7 +52,7 @@ exports.list = function(req, res, next) {
 			 		libObj = new Date(directors[i].times);
 			 		directors[i].times = libObj.getFullYear() + '-' + (libObj.getMonth()+1) + '-' + libObj.getDate();
 			 	}
-				res.render('list', {title: '首页', pageName: 'list', list: directors, id: groupId});
+				res.render('list', {title: '文件夹列表', pageName: 'list', list: directors, id: groupId});
 			})
 }
 

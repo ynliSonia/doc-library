@@ -3,17 +3,17 @@
 {{#block ("body")}}
 
     <div class="add-doc">
-        <form action="/addDirector" method="post" enctype="multipart/form-data"  class="form-horizontal">
+        <form action="/editTheDirector" method="post" enctype="multipart/form-data"  class="form-horizontal">
             <div class="form-group">
                 <label for="J_name" class="col-sm-2 control-label">文档名称</label>
                 <div class="col-xs-3">
-                  <input type=" text" class="form-control" id="J_name" name="name" placeholder="文档名称">
+                  <input type=" text" class="form-control" id="J_name" name="name" placeholder="文档名称" value={{name}} />
                 </div>
             </div>
             <div class="form-group">
                 <label for="J_desc" class="col-sm-2 control-label">文档描述</label>
                 <div class="col-xs-3">
-                  <textarea name="desc" id="J_desc" class="form-control" rows="3"></textarea>
+                  <textarea name="desc" id="J_desc" class="form-control" rows="3">{{desc}}</textarea>
                 </div>
             </div>
             <div class="form-group">
@@ -22,9 +22,9 @@
                     <input type="file" class="form-control" name="cover_img" id="J_cover_img" />
                 </div>
             </div>
-            <input type="hidden" name="author_id" value="{{this.id}}">
+            <input type="hidden" name="directorId" value="{{id}}">
             <div class="btn-box">
-                <input type="submit" id="J_btn" value="添加" class="btn btn-default" />
+                <input type="submit" id="J_btn" value="提交" class="btn btn-default" />
             </div>
 
         </form>
