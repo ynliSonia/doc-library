@@ -49,4 +49,9 @@ router.get('/about', task.about);
 // 编辑
 router.get('/edit-group/:id', editor.editGroup);
 router.post('/editTheGroup', editor.editTheGroup);
+
+// 编辑文件夹
+router.get('/edit-director/:id', editor.editDirector);
+router.post('/editTheDirector', editor.editTheDirector);
+
 module.exports = router;

@@ -49,10 +49,10 @@ exports.change = function(req, type) {
 				reject(-1, '系统错误');   // -1 系统错误
 				return ;
 			}
-
+			
 			// 根据类型确定文件的后缀名
 			var extName = '';  //后缀名
-		    switch (files.photo.type) {
+		    switch (files.photo && files.photo.type) {
 		      case 'image/pjpeg':
 		        extName = 'jpg';
 		        break;
@@ -70,7 +70,7 @@ exports.change = function(req, type) {
 		      	break;
 		    }
 		
-	    	if(extName === '' && (type === 'edit' && files.photo.size > 0)) {
+	    	if(extName === '' && (type === 'edit' && files.photo && files.photo.size > 0)) {
 	    		reject(-2, '不支持该类型的文件');
 	    		return ;
 	    	}
@@ -79,7 +79,9 @@ exports.change = function(req, type) {
     		var newPath = form.uploadDir + '/' + avatarName + '.' + extName;
 
 	    	// 把源文件传入
-	    	fs.renameSync(files.photo.path, newPath);
+	    	if(files.photo) {
+	    		fs.renameSync(files.photo.path, newPath);
+	    	}
 
 			// var id = 10000 + 3;
 		if(type === 'add') {
@@ -110,7 +112,7 @@ exports.change = function(req, type) {
 					var newData = groups[0];
 					newData.name = fields.name;
 					newData.identity = fields.identity;
-					if(files.photo.size > 0){
+					if(files.photo && files.photo.size > 0){
 						 newData.photo = '/docs/photos/' + avatarName + '.' + extName;
 					}
 				
