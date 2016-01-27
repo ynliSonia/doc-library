@@ -31,7 +31,6 @@ exports.find = function(query) {
 exports.add = function(req) {
 
 	db = helper.db;
-	// var taskObj = fs.readFileSync(dataPath, 'utf-8');
 	var self = this;
 	var form = new formidable.IncomingForm();
 	form.encoding = 'utf-8';   // 设置编码
@@ -45,7 +44,6 @@ exports.add = function(req) {
 				reject({status: -1, text: '系统出错啦~'})
 				return false;
 			}
-
 
 			// 根据类型确定文件的后缀名
 			var extName = '';  //后缀名
@@ -84,7 +82,6 @@ exports.add = function(req) {
 	    	fs.renameSync(files.cover_img.path, newPath);
 
 	    	// 把 PSD文件转为 png 存储，方便查看
-
 	    	if(extName === 'psd'){
 		    	psdToPng(newPath, pngPath);
 	   		}
@@ -118,7 +115,6 @@ exports.add = function(req) {
 	   			})
 		});
 	})
-	
 
 }
 
@@ -207,10 +203,8 @@ exports.change = function(req) {
 exports.delItem = function(delId) {
 
 	var taskObj = fs.readFileSync(dataPath, 'utf-8');
-
 	var list = JSON.parse(taskObj).list;
 	var len = list.length;
-
 	var flag = false;
 
 	for(var i = 0; i < len ; i++) {

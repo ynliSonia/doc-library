@@ -86,12 +86,8 @@ function WrapperDbMethodByPromise(db) {
 	};
 
 	db.remove = function(dbName, query) {
-	//if (query._id) {
-	  //    query._id = helper.toObjectID(query._id);
-	   // }
 
 	    return new Promise(function(resolve, reject) {
-		
 	      db.collection(dbName).remove(query, function(err) {
 	        err ? reject(err): resolve();
 	      });

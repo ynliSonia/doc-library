@@ -49,7 +49,6 @@ exports.change = function(req, type) {
 				reject(-1, '系统错误');   // -1 系统错误
 				return ;
 			}
-			
 			// 根据类型确定文件的后缀名
 			var extName = '';  //后缀名
 		    switch (files.photo && files.photo.type) {
@@ -69,7 +68,7 @@ exports.change = function(req, type) {
 		      	extName='gif';
 		      	break;
 		    }
-		
+
 	    	if(extName === '' && (type === 'edit' && files.photo && files.photo.size > 0)) {
 	    		reject(-2, '不支持该类型的文件');
 	    		return ;
@@ -82,44 +81,43 @@ exports.change = function(req, type) {
 	    	if(files.photo) {
 	    		fs.renameSync(files.photo.path, newPath);
 	    	}
+	    	
+			if(type === 'add') {
+				self.find({})
+				  .then(function(groups) {
+				  	groups.sort(function(a, b) {
+				  		return a.id < b.id ? 1 : -1;
+				  	});
+				  	var id = groups[0] ? groups[0].id + 1 : 10000;
+				  	var times = new Date();
 
-			// var id = 10000 + 3;
-		if(type === 'add') {
-			self.find({})
-			  .then(function(groups) {
-			  	groups.sort(function(a, b) {
-			  		return a.id < b.id ? 1 : -1;
-			  	});
-			  	var id = groups[0] ? groups[0].id + 1 : 10000;
-			  	var times = new Date();
-
-				var item = {
-					name: fields.name,
-					identity: fields.identity,
-					photo: '/docs/photos/' + avatarName + '.' + extName,
-					id: id,
-					times: times
-				}
-
-				db.insert('groups', item);
-				resolve();
-			  })
-		} else {
-			var groupId = parseInt(fields.groupId);
-			self.find({id: groupId})
-				.then(function(groups) {
-					if(groups.length <= 0) return ;
-					var newData = groups[0];
-					newData.name = fields.name;
-					newData.identity = fields.identity;
-					if(files.photo && files.photo.size > 0){
-						 newData.photo = '/docs/photos/' + avatarName + '.' + extName;
+					var item = {
+						name: fields.name,
+						identity: fields.identity,
+						photo: '/docs/photos/' + avatarName + '.' + extName,
+						id: id,
+						times: times
 					}
-				
-					self.update({id: groupId}, newData);
+
+					db.insert('groups', item);
 					resolve();
-				});
-		}
+				  })
+			} else {
+				var groupId = parseInt(fields.groupId);
+				self.find({id: groupId})
+					.then(function(groups) {
+						if(groups.length <= 0) return ;
+						var newData = groups[0];
+						newData.name = fields.name;
+						newData.identity = fields.identity;
+						if(files.photo && files.photo.size > 0){
+							 newData.photo = '/docs/photos/' + avatarName + '.' + extName;
+						}
+					
+						self.update({id: groupId}, newData);
+						resolve();
+					});
+			}
 		});
 	});
 }

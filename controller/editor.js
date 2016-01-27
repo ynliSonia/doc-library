@@ -15,11 +15,10 @@ exports.editGroup = function(req, res, next) {
 exports.editTheGroup = function(req, res, next) {
 	Group.change(req, 'edit')
 		.then(function(){
-
-		res.redirect('/');
-	}, function(err) {
-		res.json({"status": 0, "text": "分组信息修改失败"});
-	})
+			res.redirect('/');
+		}, function(err) {
+			res.json({"status": 0, "text": "分组信息修改失败"});
+		})
 
 }
 
@@ -27,10 +26,11 @@ exports.editTheGroup = function(req, res, next) {
 exports.editDirector = function(req, res, next) {
 
 	var directorId = parseInt(req.params.id);
-	Director.find({id: directorId})
-			.then(function(directors) {
-				var director = directors[0];
-				res.render('edit-director', {title: "编辑文件夹", pageName: 'add-doc', id: directorId, name: director.name, desc: director.desc, cover_img: director.cover_img});
+	Director
+		.find({id: directorId})
+		.then(function(directors) {
+			var director = directors[0];
+			res.render('edit-director', {title: "编辑文件夹", pageName: 'add-doc', id: directorId, name: director.name, desc: director.desc, cover_img: director.cover_img});
 	});
 }
 

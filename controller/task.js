@@ -8,7 +8,6 @@ var Director = require('../model/director');
 exports.index = function(req, res, next) {
 
 	var groups = Group.find({});
-
 	Group.find({})
 		 .then(function(groups) {
 		 	var len = groups.length;
@@ -42,18 +41,18 @@ exports.list = function(req, res, next) {
 
 	var groupId = req.params.id;
 	Director.find({author_id: groupId})
-			.then(function(directors) {
-				var len = directors.length;
-			 	var libObj;
-				directors.sort(function(a, b) {
-					return new Date(a.times).getTime() < new Date(b.times).getTime();
-				})
-			 	for(var i = 0;i< len; i++) {
-			 		libObj = new Date(directors[i].times);
-			 		directors[i].times = libObj.getFullYear() + '-' + (libObj.getMonth()+1) + '-' + libObj.getDate();
-			 	}
-				res.render('list', {title: '文件夹列表', pageName: 'list', list: directors, id: groupId});
+		.then(function(directors) {
+			var len = directors.length;
+			var libObj;
+			directors.sort(function(a, b) {
+				return new Date(a.times).getTime() < new Date(b.times).getTime();
 			})
+			for(var i = 0;i< len; i++) {
+				libObj = new Date(directors[i].times);
+				directors[i].times = libObj.getFullYear() + '-' + (libObj.getMonth()+1) + '-' + libObj.getDate();
+			}
+			res.render('list', {title: '文件夹列表', pageName: 'list', list: directors, id: groupId});
+		})
 }
 
 // 新建文件夹
@@ -79,7 +78,7 @@ exports.docList = function(req, res, next) {
 		   .then(function(libraries) {
 		   	libraries.sort(function(a, b) {
 				return new Date(a.times).getTime() < new Date(b.times).getTime();
-			})	
+			})
 			res.render('doc-list', {title: '文档列表', pageName: 'doc-list', list: libraries, id: req.params.id})
 		   })
 }
@@ -98,16 +97,16 @@ exports.addDoc = function(req, res, next) {
 	Library.add(req)
 		.then(function(id) {
 			res.redirect('/doc-list/' + id);
-	}, function(text) {
-		console.log(text);
-		res.json({status: 0, text: 'text'});
-	});
+		}, function(text) {
+			console.log(text);
+			res.json({status: 0, text: 'text'});
+		});
 }
 
 // 删除文档
 exports.deleteLibrary = function(req, res, next) {
 	Library.delete(req)
-	       .then(function() {
+		.then(function() {
 			res.redirect(req.get('referer'));
 		});
 }
@@ -135,9 +134,6 @@ exports.detail = function(req, res, next) {
 		   .then(function(detail) {
 
 		   	var docPath = detail ? detail[0].docPath : '';
-
-
-
 
 		   	var docPaths = [];
 		   	docPaths.push(docPath);

@@ -60,7 +60,7 @@ function psdToPng(newPath, pngPath) {
 function pdfToImage(newPath, pngPath) {
 	var PDFImage = PdfImage.PDFImage;
 	var pdfImage = new PDFImage(newPath);
-	console.log(pdfImage);
+
 	pdfImage.convertPage(0).then(function(imagePath) {
 		fs.existsSync('../DB/test.png');
 	});

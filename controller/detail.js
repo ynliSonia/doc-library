@@ -6,10 +6,7 @@ var path = require('path');
 var unoconv = require('unoconv2');
 
 var PATH_CONF = path.resolve(__dirname, '../DB/');
-
-
 var tmpPdf = path.resolve(__dirname, '../DB/');
-
 
 // 方法列表
 var Methors = {
@@ -47,8 +44,7 @@ var Methors = {
 				reject();
 				return;
 			}
-			// console.log(result);
-			//fs.writeFile(tmpHtml + 'temp.html', result);
+
 		})
 	},
 	// 自定义，判断某个值是否在列表中
@@ -63,20 +59,6 @@ var Methors = {
 	    }
 	    return flag;
 	}
-	// office2Pdf: function(newPath, resolve, reject) {
-	// 	var self = this;
-	// 	var docPath = PATH_CONF + newPath.substring(5);
-	// 	unoconv.convert(docPath, 'pdf', function(err, result) {
-
-	// 		if(err) {
-	// 			reject();
-	// 			return;
-	// 		}
-	// 		fs.writeFile(tmpPdf + '/temp.pdf', result);
-	// 		self.pdf2Image(tmpPdf + '/temp.pdf', resolve);
-	// 	});
-
-	// }
 }
 
 // 详情预览
@@ -101,7 +83,6 @@ exports.review = function(req, res, next) {
 				res.render('detail', {title: '详情', pageName: 'detail', list: [], htmlPath: detail[0].convert_path});
 			} else if(extName === 'ppt' || extName === 'pptx') {
 
-				// console.log(detail[0], detail[0].convert_path);
 				Methors.pdf2Image(detail[0].convert_path, function(imgList) {
 					res.render('detail', {title: '详情', pageName: 'detail', list: imgList});
 				})
