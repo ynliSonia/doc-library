@@ -1,9 +1,9 @@
 
-var task = require('../model/task');
+// var task = require('../model/task');
 var Group = require('../model/group');
 var Library = require('../model/library');
 var Director = require('../model/director');
-
+var path = require('path');
 // 首页
 exports.index = function(req, res, next) {
 
@@ -98,7 +98,6 @@ exports.addDoc = function(req, res, next) {
 		.then(function(id) {
 			res.redirect('/doc-list/' + id);
 		}, function(text) {
-			console.log(text);
 			res.json({status: 0, text: 'text'});
 		});
 }
@@ -112,18 +111,18 @@ exports.deleteLibrary = function(req, res, next) {
 }
 
 // 删除
-exports.del = function(req, res, next) {
+// exports.del = function(req, res, next) {
 
-	var delId = req.params.id;
-	var result = task.delItem(delId);
+// 	var delId = req.params.id;
+// 	var result = task.delItem(delId);
 
-	if(result) {
-		res.json({'status': 1});
-		return ;
-	}
-	res.json({'status': 0});
+// 	if(result) {
+// 		res.json({'status': 1});
+// 		return ;
+// 	}
+// 	res.json({'status': 0});
 
-}
+// }
 
 // 详情预览
 exports.detail = function(req, res, next) {
@@ -134,7 +133,6 @@ exports.detail = function(req, res, next) {
 		   .then(function(detail) {
 
 		   	var docPath = detail ? detail[0].docPath : '';
-
 		   	var docPaths = [];
 		   	docPaths.push(docPath);
 		   	res.render('detail', {title: '详情', pageName: 'detail', docPath: docPath});
@@ -143,6 +141,17 @@ exports.detail = function(req, res, next) {
 }
 
 
+// 下载
+exports.download = function(req, res, next) {
+	var docId = parseInt(req.params.id);
+
+	Library.find({id: docId})
+		   .then(function(detail) {
+		   		var docPath = path.resolve(__dirname, '../DB/' + detail[0].download.split('/docs/')[1]);
+		   		var fileName = detail[0].name;
+		   		res.download(docPath, fileName)
+		   })
+}
 
 // 关于页面
 exports.about = function(req, res, next) {

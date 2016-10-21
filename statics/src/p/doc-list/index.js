@@ -1,9 +1,4 @@
 
-
-// var add = require('./test.js');
-
-// console.log('all is :' + add(1, 2));
-
 var List = function() {
 	this.init();
 }
@@ -30,6 +25,14 @@ List.prototype = {
 		$('.J_show_ewm').on('mouseleave', function(ev) {
 			var $tar = $(ev.currentTarget);
 			$tar.siblings('.J_qrcode').fadeOut();
+		});
+		$('.J_delete_library').on('click', function(ev) {
+			ev.preventDefault();
+			var self = this;
+			if(window.confirm("确定删除该文件么？")) {
+				var a = $(ev.target).next()
+				a[0].click();
+			}
 		})
 	},
 

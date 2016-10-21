@@ -22,7 +22,7 @@
                     <input type="file" class="form-control" name="photo" id="J_photo" />
                 </div>
             </div>
-	<input type="hidden" value={{id}} name="groupId" />
+	       <input type="hidden" value={{id}} name="groupId" />
             <div class="btn-box">
                 <input type="submit" id="J_btn" value="添加" class="btn btn-default" />
             </div>

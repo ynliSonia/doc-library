@@ -12,10 +12,6 @@
 	}var i = typeof require == "function" && require;for (var o = 0; o < r.length; o++) s(r[o]);return s;
 })({ 1: [function (require, module, exports) {
 
-		// var add = require('./test.js');
-
-		// console.log('all is :' + add(1, 2));
-
 		var List = function List() {
 			this.init();
 		};
@@ -42,6 +38,14 @@
 				$('.J_show_ewm').on('mouseleave', function (ev) {
 					var $tar = $(ev.currentTarget);
 					$tar.siblings('.J_qrcode').fadeOut();
+				});
+				$('.J_delete_library').on('click', function (ev) {
+					ev.preventDefault();
+					var self = this;
+					if (window.confirm("确定删除该文件么？")) {
+						var a = $(ev.target).next();
+						a[0].click();
+					}
 				});
 			},
 

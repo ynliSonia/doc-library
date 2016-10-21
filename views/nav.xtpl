@@ -9,15 +9,11 @@
 				<a href="/" class="name"> 首页 </a>
 			</li>
 			<li class="nav-item">
-				<a href="/" class="name"> 分组管理 </a>
+				<a href="/" class="name"> 我的项目 </a>
 			</li>
 			<li class="nav-item">
 				<a href="/about" class="name"> 关于 </a>
 			</li>
 		</ul>
-
-	
-
-
 	</div>
 </div>

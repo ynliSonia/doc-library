@@ -3,10 +3,7 @@ var express = require('express');
 var router = express.Router();
 var task = require('./controller/task');
 var detail = require('./controller/detail');
-
 var editor = require('./controller/editor');
-
-
 
 
 // 首页
@@ -33,11 +30,13 @@ router.get('/new/:id', task.new);
 router.get('/doc-list/:id', task.docList);
 // 新增文档接口
 router.post('/addItem', task.addDoc);
+
+router.get('/download/:id', task.download);
 // 删除文档
 router.get('/deleteDoc/:id', task.deleteLibrary);
 
 // 删除某个文档
-router.delete('/del/:id', task.del);
+// router.delete('/del/:id', task.del);
 
 // 详情预览页
 router.get('/detail/:id', detail.review);

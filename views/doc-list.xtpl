@@ -24,8 +24,9 @@
 								<a href="javascript:;" class="ps-icon-font J_show_ewm">&#xe602;</a>
 								<div class="J_qrcode qrcode-box" data-url="/detail/{{this.id}}">
 								</div>
-								<a href="{{this.download}}" download class="ps-icon-font">&#xe604;</a>
-								<a href="/deleteDoc/{{this.id}}" class="ps-icon-font">&#xe607;</a>
+								<a href="/download/{{this.id}}" class="ps-icon-font">&#xe604;</a>
+								<a href="#" class="ps-icon-font J_delete_library">&#xe607;</a>
+								<a href="/deleteDoc/{{this.id}}" class="hide-delete J_delete_library_btn">&#xe607;</a>
 							</div>
 						</div>
 						<p class="doc-desc">{{this.desc}} {{this.times}}</p>
